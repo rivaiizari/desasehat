@@ -1,0 +1,12 @@
+CRITICAL - 2022-04-11 06:27:19 --> Use of undefined constant APP_IMAGE_HOME_TOP - assumed 'APP_IMAGE_HOME_TOP' (this will throw an Error in a future version of PHP)
+#0 C:\xampp74\htdocs\physiojogja\app\Views\home_view.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp74\\htdo...', 58, Array)
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('home_view', Array, true)
+#4 C:\xampp74\htdocs\physiojogja\app\Controllers\Home.php(8): view('home_view')
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}

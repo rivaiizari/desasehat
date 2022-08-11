@@ -1,0 +1,6 @@
+CRITICAL - 2022-05-26 08:58:18 --> Cannot redeclare showDropdownPernikahan() (previously declared in C:\xampp74\htdocs\physiojogja\app\Helpers\master_helper.php:85)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-26 08:59:09 --> Cannot redeclare showDropdownPernikahan() (previously declared in C:\xampp74\htdocs\physiojogja\app\Helpers\master_helper.php:85)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

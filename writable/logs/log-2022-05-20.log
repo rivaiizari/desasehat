@@ -1,0 +1,57 @@
+CRITICAL - 2022-05-20 20:45:14 --> Undefined variable: empty
+#0 C:\xampp74\htdocs\physiojogja\app\Helpers\master_helper.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 112, Array)
+#1 C:\xampp74\htdocs\physiojogja\app\Views\pendaftaran_view.php(433): showDropdownAssesmentTerapis('id="inpRefATera...')
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('pendaftaran_vie...', Array, true)
+#5 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(24): view('pendaftaran_vie...')
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->index()
+#7 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-05-20 20:45:41 --> Undefined variable: empty
+#0 C:\xampp74\htdocs\physiojogja\app\Helpers\master_helper.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 112, Array)
+#1 C:\xampp74\htdocs\physiojogja\app\Views\pendaftaran_view.php(433): showDropdownAssesmentTerapis('id="inpRefATera...')
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('pendaftaran_vie...', Array, true)
+#5 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(24): view('pendaftaran_vie...')
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->index()
+#7 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-05-20 20:46:06 --> Undefined variable: empty
+#0 C:\xampp74\htdocs\physiojogja\app\Helpers\master_helper.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 112, Array)
+#1 C:\xampp74\htdocs\physiojogja\app\Views\pendaftaran_view.php(433): showDropdownAssesmentTerapis('id="inpRefATera...')
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('pendaftaran_vie...', Array, true)
+#5 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(24): view('pendaftaran_vie...')
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->index()
+#7 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-05-20 23:48:27 --> Unsupported operand types
+#0 C:\xampp74\htdocs\physiojogja\app\Views\pendaftaran_view.php(333): showDropdownFKemampuan('name="inpmFKema...')
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('pendaftaran_vie...', Array, true)
+#4 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(24): view('pendaftaran_vie...')
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->index()
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#7 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-20 23:54:48 --> The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence
+#0 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Common.php(633): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'The behavior of...', 'C:\\xampp74\\htdo...', 136, Array)
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Common.php(633): include_once()
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Controller.php(85): helper(Array)
+#3 C:\xampp74\htdocs\physiojogja\app\Controllers\BaseController.php(46): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#4 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(810): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

@@ -1,0 +1,30 @@
+CRITICAL - 2022-05-16 06:18:59 --> Class 'App\Models\Registrasi_pasien_model' not found
+#0 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(809): App\Controllers\Registrasi\Rpasien->__construct()
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 08:07:57 --> Undefined variable: noTelp
+#0 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 37, Array)
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
+CRITICAL - 2022-05-16 18:48:43 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+#0 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(78): App\Models\Registrasi_pasien_model->last_data_pasien()
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->genKodeRM()
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
+CRITICAL - 2022-05-16 18:55:39 --> Undefined property: App\Controllers\Registrasi\Rpasien::$Registrasi_pasien_model
+#0 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp74\\htdo...', 52, Array)
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}

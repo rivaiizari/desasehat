@@ -1,0 +1,31 @@
+CRITICAL - 2022-05-18 18:55:13 --> Undefined variable: cek_rm
+#0 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 113, Array)
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->getloadtabelcari()
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
+ERROR - 2022-05-18 18:57:55 --> Unknown column 'no_rm' in 'where clause'
+CRITICAL - 2022-05-18 18:57:55 --> Unknown column 'no_rm' in 'where clause'
+#0 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT id_pasie...', 0)
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id_pasie...')
+#2 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id_pasie...')
+#3 C:\xampp74\htdocs\physiojogja\app\Models\Registrasi_pasien_model.php(48): CodeIgniter\Database\BaseConnection->query('SELECT id_pasie...')
+#4 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(120): App\Models\Registrasi_pasien_model->pasien_cari(Array)
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->getloadtabelcari()
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#7 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
+CRITICAL - 2022-05-18 19:14:47 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp74\\htdo...')
+#1 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Regi...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Regi...')
+#3 C:\xampp74\htdocs\physiojogja\app\Controllers\Registrasi\Rpasien.php(13): spl_autoload_call('App\\Models\\Regi...')
+#4 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(809): App\Controllers\Registrasi\Rpasien->__construct()
+#5 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp74\htdocs\physiojogja\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp74\htdocs\physiojogja\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
