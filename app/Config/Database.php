@@ -38,7 +38,7 @@ class Database extends Config
         //'database' => 'aphysioc_jogjadb',
         'username' => 'root',
         'password' => '',
-        'database' => 'db_physiojogja',
+        'database' => 'db_desasehat',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
