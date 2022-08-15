@@ -8,6 +8,23 @@ class Registrasi_pasien_model extends Model {
         $db = \Config\Database::connect();
     }
 
+    public function pasien_cek_serch($data){
+        $where = "";
+        if (!empty($data['nik'])) {
+			$where .= " AND nik = '" .$data['nik']. "' ";
+		}
+        if (!empty($data['idp'])) {
+			$where .= " AND id_pasien = '" .$data['id_pasien']. "' ";
+		}
+        // WHERE id_pasien IS NOT NULL
+        // WHERE isaktif = '1'
+        $query = $this->db->query("SELECT id_pasien as id, nama, nik, tgl_lahir, jk, isaktif
+            FROM pasien
+            WHERE id_pasien IS NOT NULL
+            $where");
+        return $query->getResult();
+    }
+
     public function pasien_add($data){
         $query = $this->db->table('pasien')->insert($data);
         return  $this->db->insertID();

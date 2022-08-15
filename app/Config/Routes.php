@@ -89,6 +89,7 @@ $routes->group('registrasi', ['filter' => 'filterakses:2'], function ($routes) {
     $routes->get('terapis', 'Dashboard\Dterapis::index');
 
     $routes->group('pasien', function ($routes) {
+        $routes->post('tsave', 'Registrasi\Rpasien::ajax_cek_save_pasien');
         $routes->post('save', 'Registrasi\Rpasien::save');
         $routes->post('gen', 'Registrasi\Rpasien::genKodeRM');
         $routes->post('loadtabelcari', 'Registrasi\Rpasien::getloadtabelcari');

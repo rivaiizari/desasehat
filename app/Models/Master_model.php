@@ -94,6 +94,26 @@ class Master_model extends Model {
         return $query->getResult();
     }
 
+    public function getAllRef_medis_form($jenis, $isaktif){
+        // all = semua, aktif = 1,tidak aktif = 0
+        $where = "";
+        if($isaktif == 'all'){
+            $where = "";
+        }else if($isaktif == 'tidak'){
+            $where = "isaktif = '0'";
+        }else{
+            $where = "isaktif = '1'";
+        }
+
+        $query = $this->db->query("SELECT value_ref AS id, nama_ref AS nama
+        FROM ref_medis_form
+        WHERE jenis IS NOT NULL
+        AND jenis = '".$jenis."'
+        $where
+        ORDER BY urut ASC");
+        return $query->getResult();
+    }
+
 
 
 

@@ -17,22 +17,75 @@ class Rpasien extends BaseController {
 		}else{
 			$this->logged_in = '';
 		}
-
     }
 
     public function index(){
-        return view('pendaftaran_view');
+        $data = [
+			'idLog' => $this->logged_in,
+		];
+		// $data['books'] = $this->expertise_epermintaan_model->dataRiwayatPerExpertise($dataIn);
+        return view('registrasi/pendaftaran_view', $data);
     }
+
+    public function ajax_cek_save_pasien(){
+		$request = \Config\Services::request();
+        $is_ajax = $request->isAJAX();
+        $data = $request->getPost();
+        if ($is_ajax) {
+			$idp = !empty($request->getPost('idp')) ? $request->getPost('idp'):NULL; 
+			$nik = !empty($request->getPost('id')) ? $request->getPost('id'):NULL; 
+			$data = array(
+				'id_pasien' =>  $idp,
+				'nik' =>  $nik,
+			);
+			if(empty($nik)){
+				$resp['status'] = false;
+				$resp['code'] = '204';
+				$resp['message'] = 'Maaf Data NIK harus ada';
+				return $this->response->setJSON($resp);
+				die();
+			}
+			$insert = $this->registrasi_pasien_model->pasien_cek_serch($data);
+			if((count($insert)>=1) && (empty($idp))){
+                // idp null dan data nip sudah ada
+				$resp['status'] = false;
+				$resp['code'] = '203';
+				$resp['message'] = 'Maaf Data NIK sudah dipakai';
+				$resp['nik'] = $nik;
+			}else if((count($insert)>=1) && (!empty($idp))){
+                // idp ada dan nip lebih lebih dari 1
+				$resp['status'] = true;
+				$resp['code'] = '201';
+				$resp['info'] = count($insert);
+				$resp['insert'] = $insert;
+			}else{
+				$resp['status'] = true;
+				$resp['code'] = '200';
+				$resp['info'] = count($insert);
+				$resp['insert'] = $insert;
+			}
+        } else {
+            $resp['status'] = false;
+            $resp['code'] = '403';
+            $resp['subtitle'] = 'FORBIDDEN';
+            $resp['message'] = 'No direct script access allowed';
+        }
+        return $this->response->setJSON($resp);
+	}
 
     public function save(){
 		$request = \Config\Services::request();
         $is_ajax = $request->isAJAX();
         $data = $request->getPost();
         if ($is_ajax) {
+           
+            $id_pasien =  !empty($request->getPost('inp_idpasien')) ? $request->getPost('inpNama'): null;
+            $nik =  !empty($request->getPost('inpnik')) ? $request->getPost('inpnik'): null;
             $convertDate = date("Y/m/d", strtotime(str_replace('/', '-', $request->getPost('inp_tgl_lahir'))));
             $data = array(
 				// 'id_pasien' =>  $request->getPost('inpNoBPJS'),
-				// 'kode_rm' =>  $request->getPost('inpRM_r'),
+				'nik' => $nik,
+				'no_bpjs' => !empty($request->getPost('inpbpjs')) ? $request->getPost('inpbpjs'): null,
 				'nama' => !empty($request->getPost('inpNama')) ? $request->getPost('inpNama'): null,
 				'no_telp' => !empty($request->getPost('inpPhone')) ? $request->getPost('inpPhone'): null,
 				'alamat' => !empty($request->getPost('inpAlamat')) ? $request->getPost('inpAlamat'): '',
@@ -42,38 +95,44 @@ class Rpasien extends BaseController {
 				'id_kelurahan' => !empty($request->getPost('inpKelurahan')) ? $request->getPost('inpKelurahan'): null,
 				'tgl_lahir' => !empty($convertDate) ? $convertDate: null,
 				'jk' => !empty($request->getPost('inpJK')) ? $request->getPost('inpJK'): null,
+				// 'id_agama' => !empty($request->getPost('inpAgama')) ? $request->getPost('inpAgama'): null,
 				'id_pernikahan' => !empty($request->getPost('inpPernikahan')) ? $request->getPost('inpPernikahan'): null,
 				'id_pekerjaan' => !empty($request->getPost('inpPekerjaan')) ? $request->getPost('inpPekerjaan'): null,
-				'id_user' =>  $this->logged_in,
-				'insertdate'=> date("Y-m-d H:i:s"),
+				'vaksin_cov' => !empty($request->getPost('inpVaksinasi')) ? $request->getPost('inpVaksinasi'): null,
 			);
 
-            $inpRM = $request->getPost('inpRM_r');
-            if(empty($request->getPost('inpRM_r'))){
-                $data['kode_rm'] = $this->genKodeRM();
+            $data_cek = array(
+				'nik' =>  $nik,
+			);
+		    $cek_nik = $this->registrasi_pasien_model->pasien_cek_serch($data_cek);
+            if(empty($id_pasien) && (count($cek_nik)>1)){
+                $resp['info'] = 'cnik_ada';
+
+                $resp['status'] = false;
+				$resp['code'] = '204';
+				$resp['message'] = 'Maaf Data sudah di pakai';
+				return $this->response->setJSON($resp);
+				die();
+            }
+
+            if(empty($id_pasien)){
+                $data['id_user'] =  $this->logged_in;
+                $data['insertdate'] = date("Y-m-d H:i:s");
+
                 $resp['insert'] = $this->registrasi_pasien_model->pasien_add($data);	
 				$resp['info'] = "new";
                 $resp['status'] = true;
                 $resp['msg'] = "Data berhasil di simpan!";
                 $resp['code'] = '200';
-                $resp['kode_rm'] = $data['kode_rm'];
             }else{
-			    $cek_rm = $this->registrasi_pasien_model->pasien_by_rm($inpRM);
-                if((count($cek_rm))>0){
-                    $resp['insert'] = $this->registrasi_pasien_model->pasien_update($inpRM, $data);	
-                    $resp['info'] = "update";
-                    $resp['status'] = true;
-                    $resp['msg'] = "Data berhasil di update!";
-                    $resp['code'] = '201';
-                }else{
-                    $data['kode_rm'] = $this->genKodeRM();
-                    $resp['insert'] = $this->registrasi_pasien_model->pasien_add($data);	
-                    $resp['info'] = "new";
-                    $resp['status'] = true;
-                    $resp['msg'] = "Data berhasil di simpan!";
-                    $resp['code'] = '200';
-                    $resp['kode_rm'] = $data['kode_rm'];
-                }
+			    $data['updated_id'] =  $this->logged_in;
+                $data['updated_at'] = date("Y-m-d H:i:s");
+
+                $resp['insert'] = $this->registrasi_pasien_model->pasien_update($inpRM, $data);	
+                $resp['info'] = "update";
+                $resp['status'] = true;
+                $resp['msg'] = "Data berhasil di update!";
+                $resp['code'] = '201';
             }
         } else {
             $resp['status'] = false;

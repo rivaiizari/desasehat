@@ -30,12 +30,30 @@ class Database extends Config
      *
      * @var array
      */
+
+    // public $default = [
+    //     'DSN'      => '',
+    //     'hostname' => 'localhost',
+    //     'username' => 'aphysioc_rivai',
+    //     'password' => 'aphysioc_rivai',
+    //     'database' => 'aphysioc_desasehat',
+    //     'DBDriver' => 'MySQLi',
+    //     'DBPrefix' => '',
+    //     'pConnect' => false,
+    //     'DBDebug'  => (ENVIRONMENT !== 'production'),
+    //     'charset'  => 'utf8',
+    //     'DBCollat' => 'utf8_general_ci',
+    //     'swapPre'  => '',
+    //     'encrypt'  => false,
+    //     'compress' => false,
+    //     'strictOn' => false,
+    //     'failover' => [],
+    //     'port'     => 3306,
+    // ];
+
     public $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
-	//'username' => 'aphysioc_rivai',
-        //'password' => 'aphysioc_rivai',
-        //'database' => 'aphysioc_jogjadb',
         'username' => 'root',
         'password' => '',
         'database' => 'db_desasehat',

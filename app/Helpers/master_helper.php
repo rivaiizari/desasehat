@@ -96,6 +96,34 @@
         }
     }
 
+    if (!function_exists('showDropdownVaksinasi')) {
+        function showDropdownVaksinasi($attribute = 'id="inpVaksinasi" name="inpVaksinasi"', $value = '') {
+            $model = new Master_model();
+            $list_refkelas=$model->getAllRef_medis_form('vaksinasi', 'all');
+    
+            echo '<select ' . $attribute . '>';
+            echo '<option value="">...</option>';
+            foreach ($list_refkelas as $row) {
+                echo '<option value="' . $row->id . '">' . $row->nama . '</option>';
+            }
+            echo '</select>';
+        }
+    }
+
+    if (!function_exists('showDropdownAgama')) {
+        function showDropdownAgama($attribute = 'id="inpAgama" name="inpAgama"', $value = '') {
+            $model = new Master_model();
+            $list_refkelas=$model->getAllRef_medis_form('agama', 'all');
+    
+            echo '<select ' . $attribute . '>';
+            echo '<option value="">...</option>';
+            foreach ($list_refkelas as $row) {
+                echo '<option value="' . $row->id . '">' . $row->nama . '</option>';
+            }
+            echo '</select>';
+        }
+    }
+
     if (!function_exists('showDropdownAssesmentTerapis')) {
         function showDropdownAssesmentTerapis($attribute = 'id="inpRefATerapis" name="inpRefATerapis"', $value = '') {
             if(isset($_SESSION['logged_in']) && !empty($_SESSION['logged_in'])) {

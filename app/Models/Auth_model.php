@@ -24,7 +24,7 @@ class Auth_model extends Model {
             LEFT JOIN menu mn ON mp.id_menu = mn.id_menu
             WHERE mp.id_profile = $id
             AND mp.id_menu = $idp
-            AND mn.isaktif  = 1 ");
+            AND mn.isaktif  = '1' ");
         return $query->getResultArray();
     }
 }

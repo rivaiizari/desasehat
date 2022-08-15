@@ -18,6 +18,16 @@
         <!-- notifikasi -->
         <link rel="stylesheet" href="<?= base_url().BASE_URL ?>/assets_lte/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
         <link rel="stylesheet" href="<?= base_url().BASE_URL ?>/assets_lte/plugins/toastr/toastr.min.css">
+
+        <style type="text/css">
+            .required-label {
+                color: red;
+            }
+            .user-panel img {
+                height: auto;
+                width: 5rem;
+            }
+        </style>
     </head>
     <body class="hold-transition sidebar-mini">
         <!-- Site wrapper -->

@@ -1,0 +1,312 @@
+CRITICAL - 2022-08-14 03:26:03 --> Undefined variable: data
+#0 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 27, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->index()
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
+CRITICAL - 2022-08-14 03:26:29 --> Undefined variable: data
+#0 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 27, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->index()
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
+CRITICAL - 2022-08-14 03:26:43 --> Undefined variable: data
+#0 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 27, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->index()
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
+ERROR - 2022-08-14 05:29:08 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:29:08 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:30:05 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:30:05 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:30:43 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:30:43 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(29): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:32:07 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:32:07 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:32:54 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:32:54 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:33:13 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:33:14 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(31): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:33:33 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:33:33 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:35:22 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:35:22 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:36:39 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:36:39 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:38:42 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:38:42 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:45:55 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:45:55 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:46:54 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:46:54 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:47:16 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:47:16 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:49:47 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:49:47 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(104): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:53:16 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:53:16 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(105): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:58:44 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:58:44 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(105): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 05:59:24 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 05:59:24 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(105): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 06:00:35 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 06:00:35 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(105): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 06:01:08 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 06:01:08 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(105): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-14 06:02:01 --> Column 'nama' cannot be null
+CRITICAL - 2022-08-14 06:02:01 --> Column 'nama' cannot be null
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_pasien_model.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(105): App\Models\Registrasi_pasien_model->pasien_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+CRITICAL - 2022-08-14 06:09:37 --> Call to undefined method CodeIgniter\Database\Query::getResult()
+#0 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rpasien.php(48): App\Models\Registrasi_pasien_model->pasien_cek_serch(Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rpasien->ajax_cek_save_pasien()
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rpasien))
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}

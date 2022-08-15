@@ -79,8 +79,8 @@ defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 
-define('APP_NAME', 'A3 PHYSIO JOGJA');
-define('APP_TITLE', 'A3 Physio Center Jogja');
+define('APP_NAME', 'Desa Sehat');
+define('APP_TITLE', 'Desa Sehat Jogja');
 define('URL_APP_DOMAIN', 'https://komen.kemkes.go.id/demo');
 
 define('APP_IMAGE', 'a3_physio.jpg');
