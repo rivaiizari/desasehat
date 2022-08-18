@@ -75,14 +75,7 @@
                             <div class="step" data-target="#test-l-2">
                                 <button type="button" class="step-trigger" role="tab" id="stepper1trigger2" aria-controls="test-l-2">
                                     <span class="bs-stepper-circle fas fa-save"></span>
-                                    <span class="bs-stepper-label">Paket Medis</span>
-                                </button>
-                            </div>
-                            <div class="bs-stepper-line"></div>
-                            <div class="step" data-target="#test-l-3">
-                                <button type="button" class="step-trigger" role="tab" id="stepper1trigger3" aria-controls="test-l-3">
-                                    <span class="bs-stepper-circle fas fa-map-marked"></span>
-                                    <span class="bs-stepper-label">Jadwal Terapi</span>
+                                    <span class="bs-stepper-label">Medis</span>
                                 </button>
                             </div>
                         </div>
@@ -237,81 +230,6 @@
                                     </div>
                                 </div>
                                 <form id="form_dpaket" class="form-horizontal" novalidate>
-                                    <h4 class="text-section" style="color:green">Paket Pemeriksaan:</h4>
-                                    <div class="form-group row">
-                                        <label for="inpp_id" style="color:green" class="col-sm-3 col-form-label text-lg-right text-sm-left"></label>
-                                        <div class="col-sm-6 row">
-                                            <input type="text"id="inpp_id" name="inpp_id" readonly class="form-control" style="width:150px">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmMedisPaket" style="color:green" class="col-sm-3 col-form-label text-lg-right text-sm-left">Pilih Paket<span class="required-label">*</span></label>
-                                        <div class="col-sm-6 row">
-                                            <?php showDropdownPaketMedis( $attribut = 'id="inpmMedisPaket" name="inpmMedisPaket" class="form-control" onchange="ddPaket_medis()" style="width: 100%" '); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inppkJenisbayar" style="color:green" class="col-sm-3 col-form-label text-lg-right text-sm-left">Jenis Bayar</label>
-                                        <div class="col-sm-6 row">
-                                            <?php showDropdownJenisBayar( $attribut = 'id="inppkJenisbayar" name="inppkJenisbayar" class="form-control" style="width: 100%" '); ?>
-                                        </div>
-                                    </div>
-                                    <hr class="hrm">
-                                    <div class="form-group row" style="color:red">
-                                        <label for="label_paket_sisa" class="col-sm-3 col-form-label text-lg-right text-sm-left">Detail</label>
-                                        <div class="col-sm-6" id="label_paket_sisa">
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn-primary fw-bold float-left" onclick="stepper1.previous()">Previous</button>
-                                    <input type="submit" class="btn btn-next btn-success fw-bold float-right" id="btnNextMedis" name="btnNextMedis" value="Selanjutnya" >
-                                    <br><br>
-                                </form>
-                            </div>
-                            <div id="test-l-3" role="tabpanel" class="bs-stepper-pane text-center" aria-labelledby="stepper1trigger3">
-                                <form id="form_jdterapi" class="form-horizontal" novalidate>
-                                    <div class="form-group row">
-                                        <label for="inpjJadwal" class="col-sm-3 col-form-label text-lg-right text-sm-left">Jadwal<span class="required-label">*</span></label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                                                </div>
-                                                <input type="text" class="form-control" id="inpj_jadwal" name="inpj_jadwal" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy HH:MM" data-inputmask-placeholder="dd/mm/yyyy hh:mm" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-primary fw-bold float-left" onclick="stepper1.previous()">Previous</button>
-                                    <input type="submit" class="btn btn-next btn-success fw-bold float-right" id="btnNextJadwal" name="btnNextJadwal" value="Simpan Jadwal" >
-                                    <br><br>
-                                </form>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="btn-group btn-group-sm float-right" role="group" aria-label="Basic example">
-                                            <button class="btn btn btn-warning fw-bold float-right" id="btnModalCariM" data-toggle="modal" onClick="cari_hmedis()" data-backdrop="static" style="min-width:150px; "><i class="fa fa-search"></i> Cari <span class="d-none d-sm-inline-block"> Medis</span></button>
-                                            <button type="button" class="btn btn-info" onClick="newmedis()">Add Medis Baru</button>
-                                        </div>
-                                        <br><br>
-                                    </div>
-                                </div>
-                                <form id="form_dmedis" class="form-horizontal" novalidate>
-                                    <h4 class="text-section" style="color:green">Paket Pemeriksaan:</h4>
-                                    <div class="form-group row">
-                                        <label for="inpmMedisPaket" style="color:green" class="col-sm-3 col-form-label text-lg-right text-sm-left">Pilih Paket<span class="required-label">*</span></label>
-                                        <div class="col-sm-6 row">
-                                            <div class="col-sm-8">
-                                                <?php showDropdownPaketMedis( $attribut = 'id="inpmMedisPaket" name="inpmMedisPaket" class="form-control" onchange="ddPaket_medis()" style="width: 100%" '); ?>
-                                            </div>
-                                            <div class="col-sm-4"> 
-                                                <div class="input-group-prepend" id="paketmedis_sisa">
-                                                    <span class="input-group-text bg-success"> sisa 1</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-
                                     <input type="text"id="inpm_id" name="inpm_id">
                                     <h4 class="text-section">Anamnesis:</h4>
                                     <div class="form-group row">
@@ -548,7 +466,6 @@
                                     <input type="submit" class="btn btn-next btn-success fw-bold float-right" id="btnNextMedis" name="btnNextMedis" value="Selanjutnya" >
                                     <br><br>
                                 </form>
-                                
                             </div>
                         </div>
                     </div>
