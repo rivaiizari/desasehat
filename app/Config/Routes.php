@@ -122,10 +122,17 @@ $routes->group('registrasi', ['filter' => 'filterakses:2'], function ($routes) {
 	$routes->post('kecamataninj', 'Master_modul::getAllKecamatan_inj');
 	$routes->post('kelurahaninj', 'Master_modul::getAllKelurahan_inj');
 });
+
 $routes->group('pemeriksaan', function ($routes) {
-    $routes->get('/', 'Dashboard\Dlain::index');
-    $routes->get('terapis', 'Dashboard\Dterapis::index');
+    $routes->get('/', 'Emr\Epemeriksaan::index');
 });
+
+
+
+// $routes->group('pemeriksaan', function ($routes) {
+//     $routes->get('/', 'Dashboard\Dlain::index');
+//     $routes->get('terapis', 'Dashboard\Dterapis::index');
+// });
 
 $routes->group('pemeriksaan_', function ($routes) {
     $routes->get('/', 'Dashboard\Dlain::index');

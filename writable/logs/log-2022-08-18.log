@@ -1,0 +1,21 @@
+CRITICAL - 2022-08-18 22:53:24 --> Cannot declare class App\Controllers\Dashboard\Pemeriksaan, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-18 23:06:16 --> Cannot declare class App\Controllers\Dashboard\Pemeriksaan, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-18 23:11:12 --> Cannot declare class App\Controllers\Dashboard\Epemeriksaan, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-18 23:15:43 --> Use of undefined constant URL_APP_HOME - assumed 'URL_APP_HOME' (this will throw an Error in a future version of PHP)
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp74\\htdo...', 15, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(37): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->index()
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
