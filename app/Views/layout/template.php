@@ -23,10 +23,10 @@
             .required-label {
                 color: red;
             }
-            .user-panel img {
+            /* .user-panel img {
                 height: auto;
                 width: 5rem;
-            }
+            } */
         </style>
     </head>
     <body class="hold-transition sidebar-mini">
