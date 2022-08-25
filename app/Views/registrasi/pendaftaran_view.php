@@ -220,7 +220,7 @@
                                 </form>
                             </div>
                             <div id="test-l-2" role="tabpanel" class="bs-stepper-pane" aria-labelledby="stepper1trigger2">
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-md-12">
                                         <div class="btn-group btn-group-sm float-right" role="group" aria-label="Basic example">
                                             <button class="btn btn btn-warning fw-bold float-right" id="btnModalCariPaket" data-toggle="modal" onClick="cari_hpaket()" data-backdrop="static" style="min-width:150px; "><i class="fa fa-search"></i> Histori <span class="d-none d-sm-inline-block"> Paket</span></button>
@@ -228,42 +228,9 @@
                                         </div>
                                         <br><br>
                                     </div>
-                                </div>
-                                <form id="form_dpaket" class="form-horizontal" novalidate>
-                                    <input type="text"id="inpm_id" name="inpm_id">
-                                    <h4 class="text-section">Anamnesis:</h4>
-                                    <div class="form-group row">
-                                        <label for="inpmMedisAnamnesis" class="col-sm-3 col-form-label text-lg-right text-sm-left"><span class="required-label">*</span></label>
-                                        <div class="col-sm-9">
-                                            <?php showDropdownAnamnesis( $attribut = ' name="inpmMedisAnamnesis" class="custom-control-input" style="width: 100%" '); ?>
-                                        </div>
-                                    </div>
-                                    <hr class="hrm">
-                                    <div class="form-group row">
-                                        <label for="inpmKeluhanUtamaMedis" class="col-sm-3 col-form-label text-lg-right text-sm-left">Keluhan Utama <span class="required-label">*</span></label>
-                                        <div class="col-sm-6">
-                                            <!-- <input type="text" class="form-control"  id="inpmKeluhanMedis" name="inpmKeluhanMedis" autocomplete="off" required> -->
-                                            <textarea class="form-control" id="inpmKeluhanUtamaMedis" name="inpmKeluhanUtamaMedis" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmKeluhanSekarangMedis" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Penyakit Sekarang </label>
-                                        <div class="col-sm-6">
-                                            <textarea class="form-control" id="inpmKeluhanSekarangMedis" name="inpmKeluhanSekarangMedis" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmKeluhanDahuluMedis" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Penyakit Dahulu dan Penyerta </label>
-                                        <div class="col-sm-6">
-                                            <textarea class="form-control" id="inpmKeluhanDahuluMedis" name="inpmKeluhanDahuluMedis" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="form-group row">
-                                        <label for="inpmKeadaanMedis" class="col-sm-3 col-form-label text-lg-right text-sm-left">Keadaan Umum / Tingkat Kesadaran </label>
-                                        <div class="col-sm-6">
-                                            <?php //showDropdownKesadaran( $attribut = 'id="inpmKeadaanMedis" name="inpmKeadaanMedis" class="form-control select2bs4" style="width: 100%" '); ?>
-                                        </div>
-                                    </div> -->
+                                </div> -->
+                                <form id="form_dmedis" class="form-horizontal" novalidate>
+                                    
                                     <h4 class="text-section">Pemeriksaan Fisik Tanda Vital:</h4>
                                     <hr class="hrm">
                                     <div class="form-group row">
@@ -326,7 +293,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inpmDiastole" class="col-sm-3 col-form-label text-lg-right text-sm-left">Tinggi/Berat Badan <span class="required-label"></span></label>
+                                        <label for="inpmTinggi" class="col-sm-3 col-form-label text-lg-right text-sm-left">Tinggi/Berat Badan <span class="required-label"></span></label>
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <input type="text" class="form-control"  id="inpmTinggi" name="inpmTinggi" placeholder="Tinggi" data-inputmask-regex="[0-9.]{5}" autocomplete="off">
@@ -345,6 +312,51 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
+                                        <label for="inpmPerut" class="col-sm-3 col-form-label text-lg-right text-sm-left">Lingkar Perut </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmPerut" name="inpmPerut" placeholder="Lingkar perut" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> cm</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inpmKolestrol" class="col-sm-3 col-form-label text-lg-right text-sm-left">Pemeriksaan Laboratorium</span></label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmKolestrol" name="inpmKolestrol" placeholder="Kolesterol" data-inputmask-regex="[0-9.]{5}" autocomplete="off">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span>mg/dL</span>  
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control"  id="inpmGula" name="inpmGula" placeholder="Gula Darah" data-inputmask-regex="[0-9.]{5}" autocomplete="off">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span>mg/dL</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inpmAsamurat" class="col-sm-3 col-form-label text-lg-right text-sm-left"></label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmAsamurat" name="inpmAsamurat" placeholder="Asam Urat" data-inputmask-regex="[0-9.]{5}" autocomplete="off">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span>mg/dL</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group row">
                                         <label for="inpmNyeriMedis" class="col-sm-3 col-form-label text-lg-right text-sm-left">Skor Nyeri </label>
                                         <div class="col-sm-6">
                                         <?php //showDropdownKesadaran( $attribut = 'id="inpmKeadaanMedis" name="inpmKeadaanMedis" class="form-control select2bs4" style="width: 100%" '); ?>
@@ -353,114 +365,95 @@
                                     <div class="form-group row">
                                         <label for="inpmMedisFungsional" class="col-sm-3 col-form-label text-lg-right text-sm-left">Kemampuan Fungsional</label>
                                         <div class="col-sm-9">
-                                            <?php showDropdownFKemampuan( $attribut = 'name="inpmFKemampuan[]" class="custom-control-input" '); ?>
+                                            <?php //showDropdownFKemampuan( $attribut = 'name="inpmFKemampuan[]" class="custom-control-input" '); ?>
+                                        </div>
+                                    </div> -->
+                                    <input type="text"id="inpm_id" name="inpm_id">
+                                    <h4 class="text-section">ANAMNESA DAN PEMERIKSAAN :</h4>
+                                    <div class="form-group row">
+                                        <label for="inpmMedisAnamnesis" class="col-sm-3 col-form-label text-lg-right text-sm-left"><span class="required-label">*</span></label>
+                                        <div class="col-sm-9">
+                                            <?php showDropdownAnamnesis( $attribut = ' name="inpmMedisAnamnesis" class="custom-control-input" style="width: 100%" '); ?>
                                         </div>
                                     </div>
-                                    <h4 class="text-section">Pemeriksaan sistematik Khusus: <span class="required-label"></span></h4>
                                     <hr class="hrm">
                                     <div class="form-group row">
-                                        <label for="inpmMedisMuskuloskeletal" class="col-sm-3 col-form-label text-lg-right text-sm-left">a. Muskuloskeletal</label>
+                                        <label for="inpmKeluhanUtama" class="col-sm-3 col-form-label text-lg-right text-sm-left">Keluhan Utama <span class="required-label">*</span></label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisMuskuloskeletal" name="inpmMedisMuskuloskeletal" autocomplete="off">
+                                            <textarea class="form-control" id="inpmKeluhanUtama" name="inpmKeluhanUtama" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inpmMedisNeuromuskuler" class="col-sm-3 col-form-label text-lg-right text-sm-left">b. Neuromuskuler</label>
+                                        <label for="inpmRiwayatPenyakit_now" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Penyakit Sekarang </label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisNeuromuskuler" name="inpmMedisNeuromuskuler" autocomplete="off">
+                                            <textarea class="form-control" id="inpmRiwayatPenyakit_now" name="inpmRiwayatPenyakit_now" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inpmMedisKardiopulmonalr" class="col-sm-3 col-form-label text-lg-right text-sm-left">c. Kardiopulmonal</label>
+                                        <label for="inpmRiwayatPenyakit" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Penyakit</label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisKardiopulmonalr" name="inpmMedisKardiopulmonalr" autocomplete="off">
+                                            <textarea class="form-control" id="inpmRiwayatPenyakit" name="inpmRiwayatPenyakit" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inpmMedisIntegumen" class="col-sm-3 col-form-label text-lg-right text-sm-left">d. Integumen</label>
+                                        <label for="inpmRiwayat_obat" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Pengobatan<span class="required-label">*</span> </label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisIntegumen" name="inpmMedisIntegumen" autocomplete="off">
-                                        </div>
-                                    </div>
-                                    <h4 class="text-section">Pengukuran Khusus: <span class="required-label"></span></h4>
-                                    <hr class="hrm">
-                                    <div class="form-group row">
-                                        <label for="inpmMedisPengukuranMuskuloskeletal" class="col-sm-3 col-form-label text-lg-right text-sm-left">a. Muskuloskeletal</label>
-                                        <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisPengukuranMuskuloskeletal" name="inpmMedisPengukuranMuskuloskeletal" autocomplete="off">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmMedisPengukuranNeuromuskuler" class="col-sm-3 col-form-label text-lg-right text-sm-left">b. Neuromuskuler</label>
-                                        <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisPengukuranNeuromuskuler" name="inpmMedisPengukuranNeuromuskuler" autocomplete="off">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmMedisPengukuranKardiopulmonalr" class="col-sm-3 col-form-label text-lg-right text-sm-left">c. Kardiopulmonal</label>
-                                        <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisPengukuranKardiopulmonalr" name="inpmMedisPengukuranKardiopulmonalr" autocomplete="off">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmObat_hct" name="inpmObat_hct" placeholder="Hct" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> mg</span>  
+                                                    </span>
+                                                </div>
+
+                                                <input type="text" class="form-control"  id="inpmObat_captopril" name="inpmObat_captopril" placeholder="Captopril" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> mg</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inpmMedisPengukuranIntegumen" class="col-sm-3 col-form-label text-lg-right text-sm-left">d. Integumen</label>
+                                        <label for="inpmRiwayat_obat" class="col-sm-3 col-form-label text-lg-right text-sm-left"></label>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control"  id="inpmMedisPengukuranIntegumen" name="inpmMedisPengukuranIntegumen" autocomplete="off">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmObat_valsarta" name="inpmObat_valsarta" placeholder="Valsartan" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> mg</span>  
+                                                    </span>
+                                                </div>
+
+                                                <input type="text" class="form-control"  id="inpmObat_amlodipine" name="inpmObat_amlodipine" placeholder="Amlodipine" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> mg</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <h4 class="text-section">Data Penunjang: <span class="required-label"></span></h4>
-                                    <hr class="hrm">
                                     <div class="form-group row">
-                                       
-                                    </div>
-                                    <h4 class="text-section">C. Diagnosa Fisioterapi: <span class="required-label"></span></h4>
-                                    <hr class="hrm">
-                                    <div class="form-group row">
-                                        <label for="inpmMedisDFImpairment" class="col-sm-3 col-form-label text-lg-right text-sm-left">1. Impairment</label>
+                                        <label for="inpmRiwayat_obat" class="col-sm-3 col-form-label text-lg-right text-sm-left"></label>
                                         <div class="col-sm-6">
-                                            <textarea class="form-control" id="inpmMedisDFImpairment" name="inpmMedisDFImpairment" rows="3"></textarea>
+                                            <textarea class="form-control" id="inpmRiwayat_obat" name="inpmRiwayat_obat" rows="3" placeholder="Riwayat Obat Lainnya"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inpmMedisDFFunctional" class="col-sm-3 col-form-label text-lg-right text-sm-left">2. Functional Functional</label>
+                                        <label for="inpmRiwayatAlergi" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Alergi</label>
                                         <div class="col-sm-6">
-                                            <textarea class="form-control" id="inpmMedisDFFunctional" name="inpmMedisDFFunctional" rows="3"></textarea>
+                                            <textarea class="form-control" id="inpmRiwayatAlergi" name="inpmRiwayatAlergi" rows="3"></textarea>
                                         </div>
-                                    </div> <div class="form-group row">
-                                        <label for="inpmMedisDFParticipation" class="col-sm-3 col-form-label text-lg-right text-sm-left">3. Participation Restriction</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inpmRiwayatKeluarga" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Keluarga</label>
                                         <div class="col-sm-6">
-                                            <textarea class="form-control" id="inpmMedisDFParticipation" name="inpmMedisDFParticipation" rows="3"></textarea>
+                                            <textarea class="form-control" id="inpmRiwayatKeluarga" name="inpmRiwayatKeluarga" rows="3"></textarea>
                                         </div>
                                     </div>
 
-                                    <h4 class="text-section">D. Program / Rencana Terapi: </span></h4>
-                                    <hr class="hrm">
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <textarea class="form-control" id="inpmMedisRencanaTerapi" name="inpmMedisRencanaTerapi" rows="5"></textarea>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-section">E. Intervensi: </span></h4>
-                                    <hr class="hrm">
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <textarea class="form-control" id="inpmMedisIntervensi" name="inpmMedisIntervensi" rows="5"></textarea>
-                                        </div>
-                                    </div>
-                                    <h4 class="text-section">F. Evaluasi: </span></h4>
-                                    <hr class="hrm">
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <textarea class="form-control" id="inpmMedisEvaluasi" name="inpmMedisEvaluasi" rows="5"></textarea>
-                                        </div>
-                                    </div>
-                                    <hr class="hrmBlue">
-                                    <div class="form-group row">
-                                        <label for="inpmMedisDFImpairment" class="col-sm-8 col-form-label text-lg-right text-sm-right">Fisioterapis</label>
-                                        <div class="col-sm-4">
-                                        <?php showDropdownAssesmentTerapis( $attribut = 'id="inpRefATerapis" name="inpRefATerapis" class="form-control select2bs4" style="width: 100%" required"'); ?>
-                                        </div>
-                                    </div>
 
                                     <button class="btn btn-primary fw-bold float-left" onclick="stepper1.previous()">Previous</button>
                                     <input type="submit" class="btn btn-next btn-success fw-bold float-right" id="btnNextMedis" name="btnNextMedis" value="Selanjutnya" >
@@ -1215,20 +1208,18 @@
     //--------------------------------------//
      // JS FOR TAB PAKET//
     //_START_##############################//
-    $(document).on('submit', '#form_dpaket', function(event) {
+    $(document).on('submit', '#form_dmedis', function(event) {
         event.preventDefault();
         
-        var  idm = document.getElementById("inpp_id").value;
-        var  idrm = document.getElementById("inpRM_r").value;
-        if (typeof idrm != 'undefined' && idrm) {
-            if (typeof idm != 'undefined' && idm) {
+        var  nik = document.getElementById("inpnik").value;
+        if (typeof nik != 'undefined' && nik) {
                 Swal.fire({
-                    title: 'Update Data',
-                    text: "Apakah yakin ingin memakai paket ini!",
+                    title: 'Pendaftaran Medis',
+                    text: "Apakah yakin ingin mendaftarkan pasien ini!",
                     icon: 'warning',
                     showCancelButton: true,
-                    confirmButtonText: 'Yes, Pakai',
-                    cancelButtonText: 'Tidak, perbaharui data',
+                    confirmButtonText: 'Yes, Simpan',
+                    cancelButtonText: 'Tidak, nati saja',
                     reverseButtons: true
                 }).then((result) => {
                     if (result.isConfirmed) {
@@ -1246,9 +1237,6 @@
                         update_paket();
                     }
                 })
-            }else{
-                save_paket();
-            }
         }else{
             Swal.fire({
                 position: 'top-end',
