@@ -1,0 +1,29 @@
+ERROR - 2022-08-25 23:26:36 --> Unknown column 'lingkar_perut' in 'field list'
+CRITICAL - 2022-08-25 23:26:36 --> Unknown column 'lingkar_perut' in 'field list'
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_medis_model.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rmedis.php(75): App\Models\Registrasi_medis_model->medis_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rmedis->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rmedis))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-25 23:28:34 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2022-08-25 23:28:34 --> Duplicate entry '1' for key 'PRIMARY'
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp74\htdocs\desasehat\app\Models\Registrasi_medis_model.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp74\htdocs\desasehat\app\Controllers\Registrasi\Rmedis.php(75): App\Models\Registrasi_medis_model->medis_add(Array)
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Registrasi\Rmedis->save()
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrasi\Rmedis))
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#11 {main}
+ERROR - 2022-08-25 23:31:29 --> Duplicate entry '1' for key 'PRIMARY'

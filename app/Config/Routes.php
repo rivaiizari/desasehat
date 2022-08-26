@@ -95,23 +95,9 @@ $routes->group('registrasi', ['filter' => 'filterakses:2'], function ($routes) {
         $routes->post('loadtabelcari', 'Registrasi\Rpasien::getloadtabelcari');
         $routes->post('ambilpasien', 'Registrasi\Rpasien::getambilpasien');
     });
-    $routes->group('paket', function ($routes) {
-        $routes->post('save', 'Registrasi\Rpaket::save');
-        $routes->post('update', 'Registrasi\Rpaket::getupdate');
-        $routes->post('loadtabelcari', 'Registrasi\Rpaket::getloadtabelcari');
-        $routes->post('ambilpaket', 'Registrasi\Rpaket::getambilpaket');
-        
-	    $routes->post('paket_medis', 'Registrasi\Rmedis::getpaket_medis');
-    });
+
     $routes->group('medis', function ($routes) {
         $routes->post('save', 'Registrasi\Rmedis::save');
-        $routes->post('loadtabelcari', 'Registrasi\Rmedis::getloadtabelcari');
-
-	    $routes->post('paket_medis', 'Registrasi\Rmedis::getpaket_medis');
-    });
-    $routes->group('terapis', function ($routes) {
-        $routes->post('save', 'Registrasi\Rterapis::save');
-        $routes->post('loadtabelcari', 'Registrasi\Rterapis::getloadtabelcari');
     });
 
     $routes->post('kabupaten', 'Master_modul::getAllKabKota');
@@ -125,6 +111,9 @@ $routes->group('registrasi', ['filter' => 'filterakses:2'], function ($routes) {
 
 $routes->group('pemeriksaan', function ($routes) {
     $routes->get('/', 'Emr\Epemeriksaan::index');
+    $routes->post('loadtabel', 'Emr\Epemeriksaan::loadtabel');
+    $routes->post('batal', 'Emr\Epemeriksaan::pbatal');
+    $routes->get('periksa_dokter/(:num)', 'Emr\Epemeriksaan::pperiksa_dokter/$1');
 });
 
 

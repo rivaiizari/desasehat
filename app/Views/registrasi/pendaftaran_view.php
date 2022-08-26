@@ -98,25 +98,25 @@
                                             <div class="form-group row">
                                                 <label for="inpnik" class="col-sm-3 col-form-label text-lg-right text-sm-left">NIK <span class="required-label">*</span></label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="inpnik" name="inpnik" placeholder="NIK">
+                                                    <input type="text" class="form-control" id="inpnik" name="inpnik" placeholder="NIK" autocomplete="off">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inpbpjs" class="col-sm-3 col-form-label text-lg-right text-sm-left">No BPJS</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="inpbpjs" name="inpbpjs" placeholder="no bpjs">
+                                                    <input type="text" class="form-control" id="inpbpjs" name="inpbpjs" placeholder="no bpjs" autocomplete="off">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inpRM" class="col-sm-3 col-form-label text-lg-right text-sm-left">Rekam Medis</label>
                                                 <div class="col-sm-9">
-                                                    <input type="input" class="form-control" id="inpRM" name="inpRM" placeholder="no rm">
+                                                    <input type="input" class="form-control" id="inpRM" name="inpRM" placeholder="no rm" autocomplete="off">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inpNama" class="col-sm-3 col-form-label text-lg-right text-sm-left">Nama <span class="required-label">*</span></label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="inpNama" name="inpNama" placeholder="Nama Pasien">
+                                                    <input type="text" class="form-control" id="inpNama" name="inpNama" placeholder="Nama Pasien" autocomplete="off">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -126,7 +126,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                                                         </div>
-                                                        <input type="text" class="form-control" id="inp_tgl_lahir" name="inp_tgl_lahir" data-inputmask-alias="datetime" data-inputmask-inputFormat="dd/mm/yyyy" required>
+                                                        <input type="text" class="form-control" id="inp_tgl_lahir" name="inp_tgl_lahir" data-inputmask-alias="datetime" data-inputmask-inputFormat="dd/mm/yyyy" required autocomplete="off">
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,7 +158,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group row">
-                                                <label for="inpAgama" class="col-sm-3 col-form-label text-lg-right text-sm-left">Agama <span class="required-label"> *</span></label>
+                                                <label for="inpAgama" class="col-sm-3 col-form-label text-lg-right text-sm-left">Agama</label>
                                                 <div class="col-sm-9">
                                                     <?php showDropdownAgama( $attribut = 'id="inpAgama" name="inpAgama" class="form-control select2bs4" style="width: 100%" '); ?>
                                                 </div>
@@ -234,65 +234,6 @@
                                     <h4 class="text-section">Pemeriksaan Fisik Tanda Vital:</h4>
                                     <hr class="hrm">
                                     <div class="form-group row">
-                                        <label for="inpmDiastole" class="col-sm-3 col-form-label text-lg-right text-sm-left">Tekanan Darah <span class="required-label">*</span></label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control"  id="inpmSistol" name="inpmSistol" placeholder="Sistole" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <span>mm/Hg</span>  
-                                                        <!-- <i class=" fa fa-italic"></i> -->
-                                                    </span>
-                                                </div>
-                                                <input type="text" class="form-control"  id="inpmDiastole" name="inpmDiastole" placeholder="Diastole" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <span>mm/Hg</span>  
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmSuhu" class="col-sm-3 col-form-label text-lg-right text-sm-left">Suhu <span class="required-label">*</span> </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control"  id="inpmSuhu" name="inpmSuhu" placeholder="Suhu dalam Celcius" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <span> &#176;C</span>  
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmNadi" class="col-sm-3 col-form-label text-lg-right text-sm-left">Frekuensi Nadi <span class="required-label">*</span> </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control"  id="inpmNadi" name="inpmNadi" placeholder=" kali per menit" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <span> x/menit</span>  
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmNafas" class="col-sm-3 col-form-label text-lg-right text-sm-left">Pernafasan <span class="required-label">*</span> </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control"  id="inpmNafas" name="inpmNafas" placeholder="pernafasan" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <span> x/menit</span>  
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
                                         <label for="inpmTinggi" class="col-sm-3 col-form-label text-lg-right text-sm-left">Tinggi/Berat Badan <span class="required-label"></span></label>
                                         <div class="col-sm-6">
                                             <div class="input-group">
@@ -319,6 +260,65 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <span> cm</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inpmSuhu" class="col-sm-3 col-form-label text-lg-right text-sm-left">Suhu <span class="required-label">*</span> </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmSuhu" name="inpmSuhu" placeholder="Suhu dalam Celcius" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> &#176;C</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inpmDiastole" class="col-sm-3 col-form-label text-lg-right text-sm-left">Tekanan Darah <span class="required-label">*</span></label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmSistol" name="inpmSistol" placeholder="Sistole" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span>mm/Hg</span>  
+                                                        <!-- <i class=" fa fa-italic"></i> -->
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control"  id="inpmDiastole" name="inpmDiastole" placeholder="Diastole" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span>mm/Hg</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inpmNadi" class="col-sm-3 col-form-label text-lg-right text-sm-left">Frekuensi Nadi <span class="required-label">*</span> </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmNadi" name="inpmNadi" placeholder=" kali per menit" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> x/menit</span>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inpmNafas" class="col-sm-3 col-form-label text-lg-right text-sm-left">Pernafasan <span class="required-label">*</span> </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"  id="inpmNafas" name="inpmNafas" placeholder="pernafasan" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <span> x/menit</span>  
                                                     </span>
                                                 </div>
                                             </div>
@@ -356,24 +356,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group row">
-                                        <label for="inpmNyeriMedis" class="col-sm-3 col-form-label text-lg-right text-sm-left">Skor Nyeri </label>
-                                        <div class="col-sm-6">
-                                        <?php //showDropdownKesadaran( $attribut = 'id="inpmKeadaanMedis" name="inpmKeadaanMedis" class="form-control select2bs4" style="width: 100%" '); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="inpmMedisFungsional" class="col-sm-3 col-form-label text-lg-right text-sm-left">Kemampuan Fungsional</label>
-                                        <div class="col-sm-9">
-                                            <?php //showDropdownFKemampuan( $attribut = 'name="inpmFKemampuan[]" class="custom-control-input" '); ?>
-                                        </div>
-                                    </div> -->
-                                    <input type="text"id="inpm_id" name="inpm_id">
+                                   
                                     <h4 class="text-section">ANAMNESA DAN PEMERIKSAAN :</h4>
                                     <div class="form-group row">
-                                        <label for="inpmMedisAnamnesis" class="col-sm-3 col-form-label text-lg-right text-sm-left"><span class="required-label">*</span></label>
-                                        <div class="col-sm-9">
-                                            <?php showDropdownAnamnesis( $attribut = ' name="inpmMedisAnamnesis" class="custom-control-input" style="width: 100%" '); ?>
+                                        <label for="inpmMedisAnamnesis" class="col-sm-3 col-form-label text-lg-right text-sm-left">Anamnesa <span class="required-label">*</span></label>
+                                        <div class="col-sm-6">
+                                            <?php //showDropdownAnamnesis( $attribut = 'id="inpmMedisAnamnesis" name="inpmMedisAnamnesis" class="custom-control-input" style="width: 100%" '); ?>
+                                            <textarea class="form-control" id="inpmAnamnesis" name="inpmAnamnesis" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <hr class="hrm">
@@ -384,7 +373,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inpmRiwayatPenyakit_now" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Penyakit Sekarang </label>
+                                        <label for="inpmRiwayatPenyakit_now" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Penyakit Sekarang <span class="required-label">*</span></label>
                                         <div class="col-sm-6">
                                             <textarea class="form-control" id="inpmRiwayatPenyakit_now" name="inpmRiwayatPenyakit_now" rows="3"></textarea>
                                         </div>
@@ -395,8 +384,9 @@
                                             <textarea class="form-control" id="inpmRiwayatPenyakit" name="inpmRiwayatPenyakit" rows="3"></textarea>
                                         </div>
                                     </div>
+                                    <hr class="hrm">
                                     <div class="form-group row">
-                                        <label for="inpmRiwayat_obat" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Pengobatan<span class="required-label">*</span> </label>
+                                        <label for="inpmRiwayat_obat" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Pengobatan </label>
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <input type="text" class="form-control"  id="inpmObat_hct" name="inpmObat_hct" placeholder="Hct" data-inputmask-regex="[0-9.]{4}" autocomplete="off" required>
@@ -441,6 +431,7 @@
                                             <textarea class="form-control" id="inpmRiwayat_obat" name="inpmRiwayat_obat" rows="3" placeholder="Riwayat Obat Lainnya"></textarea>
                                         </div>
                                     </div>
+                                    <hr class="hrm">
                                     <div class="form-group row">
                                         <label for="inpmRiwayatAlergi" class="col-sm-3 col-form-label text-lg-right text-sm-left">Riwayat Alergi</label>
                                         <div class="col-sm-6">
@@ -518,11 +509,6 @@
     var xhrp_ambil;
     var tblListdatacarip;
 
-    var xhrpk_save;
-    var xhrpk_update;
-    var xhrpk_ambil;
-    var tblListdatacaripaket;
-
     var xhrm_paketmedis;
     var xhrm_save;
     var xhrm_ambil;
@@ -563,9 +549,9 @@
         $('#form_dpasien').validate({
             rules: {
                 inpnik: {
-                        required: true,
-                        minlength: 16
-                    },
+                    required: true,
+                    minlength: 16
+                },
                 inpNama: {
                     required: true,
                     minlength: 3
@@ -590,6 +576,10 @@
                 },
             },
             messages: {
+                inpnik: {
+                    required: "Harap isikan NIK Pasien",
+                    minlength: "Panjang nama minimal 16 characters"
+                },
                 inpNama: {
                     required: "Harap isikan Nama Pasien",
                     minlength: "Panjang nama minimal 3 characters"
@@ -630,21 +620,22 @@
 
         $('#form_dmedis').validate({
             rules: {
-                inpmMedisPaket: {
-                    required: true,
-                },
-                inpmKeluhanMedis: {
-                    required: true,
-                },
                 inpmSistol: {
-                    required: true
+                    required: true,
                 },
                 inpmDiastole: {
-                    required: true
-                },
-                inpmSuhu: {
                     required: true,
                 },
+                inpmSuhu: {
+                    required: true
+                },
+                inpmNadi: {
+                    required: true
+                },
+                inpmNafas: {
+                    required: true,
+                },
+
                 inpmNadi: {
                     required: true
                 },
@@ -659,32 +650,30 @@
                 },
             },
             messages: {
-                inpmMedisPaket: {
-                    required: "Harap isikan paket yang di pilih",
-                },
-                inpmKeluhanMedis: {
-                    required: "Harap isikan keluhan medis",
-                },
                 inpmSistol: {
-                    required: "Harap isikan Sistol"
+                    required: "Harap isikan pemeriksaan Sistol",
                 },
                 inpmDiastole: {
-                    required: "Harap isikan Diastole"
+                    required: "Harap isikan pemeriksaan Diastole",
                 },
                 inpmSuhu: {
-                    required: "Harap isikan Suhu"
+                    required: "Harap isikan pemeriksaan suhu"
                 },
                 inpmNadi: {
-                    required: "Harap isikan Nadi"
+                    required: "Harap isikan pemeriksaan Frekuensi Nadi"
                 },
                 inpmNafas: {
-                    required: "Harap isikan Nafas"
+                    required: "Harap isikan pemeriksaan Pernafasan "
                 },
-                inpmTinggi: {
-                    required: "Harap isikan Tinggi"
+
+                inpmAnamnesis: {
+                    required: "Harap isikan pemeriksaan Anamnesis"
                 },
-                inpmBerat: {
-                    required: "Harap isikan Berat"
+                inpmKeluhanUtama: {
+                    required: "Harap isikan pemeriksaan Keluhan Utama"
+                },
+                inpmRiwayatPenyakit_now: {
+                    required: "Harap isikan pemeriksaan Penyakit Sekarang"
                 },
             },
             errorElement: 'span',
@@ -699,11 +688,7 @@
                 $(element).removeClass('is-invalid');
             }
         });
-
-        
     });
-
-    
 
     // JS FOR TAB PASIEN//
     //_START_##################################//
@@ -725,8 +710,6 @@
             .done(function(data) {
                 console.log(data);
                 if(data.status){
-                    // getradiojk();
-                    // getAgeLb();
                     if(data.info >= 1){
                         if(data.code == '200'){
                             document.getElementById("ide").value = data.insert[0]['id'];
@@ -751,10 +734,6 @@
                                     timer: 1500
                                 }).then(function() {
                                     $("html, body").animate({scrollTop: 0}, 500);
-                                    document.getElementById("namePasienMedis").innerHTML = data.insert[0]['nma'];
-
-                                    st_pasien ="update";
-                                    st_medis ="new";
                                     stepper.next();
                                 });
                             }
@@ -779,7 +758,7 @@
                             showConfirmButton: false,
                             timer: 2000
                         }).then( function() {
-                            caripasien_verif(data.nik, 'nonpcare');
+                            // caripasien_verif(data.nik, 'nonpcare');
                         });
                     }
                 }
@@ -809,15 +788,15 @@
                 processData: false,
                 contentType: false,
                 beforeSend: function() {
-                    // Swal.fire({
-                    //     title: 'Mohon Menunggu...',
-                    //     html: 'Sedang Proses Menyimpan Data',
-                    //     allowEscapeKey: false,
-                    //     allowOutsideClick: false,
-                    //     didOpen: () => {
-                    //         Swal.showLoading()
-                    //     }
-                    // })
+                    Swal.fire({
+                        title: 'Mohon Menunggu...',
+                        html: 'Sedang Proses Menyimpan Data',
+                        allowEscapeKey: false,
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        }
+                    })
                 }
             })
             .done(function(data) {
@@ -830,9 +809,6 @@
                         showConfirmButton: false,
                         timer: 1500
                     }).then(function() {
-                        if(data.code != '201'){
-                            document.getElementById("inpRM_r").value = data.kode_rm;
-                        }
                         stepper1.next();
                         $("html, body").animate({scrollTop: 0}, 500);
                     });
@@ -989,440 +965,167 @@
     }
 
     function promchange_profinsi(id, ids){
-           var html = '';
-            if (typeof id != 'undefined' && id) { 
-                document.getElementById("inpKabupaten").disabled = false;
-                xhrp_ddKabKota && xhrp_ddKabKota.abort();
-                xhrp_ddKabKota = $.ajax({
-                    url : "<?php echo site_url('registrasi/kabupateninj');?>",
-                    method : "POST",
-                    data : {id: id},
-                    dataType : 'json',
-                    beforeSend: function() {
-                        Swal.fire({
-                            title: 'Mohon Menunggu...',
-                            html: 'Sedang proses mengambil data',
-                            allowEscapeKey: false,
-                            allowOutsideClick: false,
-                            didOpen: () => {
-                                Swal.showLoading()
-                            }
-                        })                      
-                    }
-                })
-                .done(function(data) {
-                    swal.close();
+        var html = '';
+        if (typeof id != 'undefined' && id) { 
+            document.getElementById("inpKabupaten").disabled = false;
+            xhrp_ddKabKota && xhrp_ddKabKota.abort();
+            xhrp_ddKabKota = $.ajax({
+                url : "<?php echo site_url('registrasi/kabupateninj');?>",
+                method : "POST",
+                data : {id: id},
+                dataType : 'json',
+                beforeSend: function() {
+                    Swal.fire({
+                        title: 'Mohon Menunggu...',
+                        html: 'Sedang proses mengambil data',
+                        allowEscapeKey: false,
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        }
+                    })                      
+                }
+            })
+            .done(function(data) {
+                swal.close();
 
+                var i;
+                html += '<option value="" >&nbsp;</option>';
+                for(i=0; i<data.length; i++){
+                    html += '<option value='+data[i].id_kabkota+'>'+data[i].nama+'</option>';
+                }
+                $('#inpKabupaten').html(html);
+            })
+            .fail(function(reason) {
+                //toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
+            })
+            .always(function() {
+                $('#inpKabupaten').val(ids).select2({ theme: 'bootstrap4' })
+            });
+        }
+    }
+        
+    function promchange_ddKabKota(id, ids){
+        var html = '';
+        if (typeof id != 'undefined' && id) { 
+            document.getElementById("inpKecamatan").disabled = false;
+            xhrp_ddKecamatan && xhrp_ddKecamatan.abort();
+            xhrp_ddKecamatan = $.ajax({
+                url : "<?php echo site_url('registrasi/kecamataninj');?>",
+                method : "POST",
+                data : {id: id},
+                dataType : 'json',
+                beforeSend: function() { 
+                }
+            })
+            .done(function(data) {
                     var i;
                     html += '<option value="" >&nbsp;</option>';
                     for(i=0; i<data.length; i++){
-                        html += '<option value='+data[i].id_kabkota+'>'+data[i].nama+'</option>';
+                        html += '<option value='+data[i].id_kecamatan+'>'+data[i].nama+'</option>';
                     }
-                    $('#inpKabupaten').html(html);
-                })
-                .fail(function(reason) {
-                    //toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-                })
-                .always(function() {
-                    $('#inpKabupaten').val(ids).select2({ theme: 'bootstrap4' })
-                });
-            }
-        }
-        
-        function promchange_ddKabKota(id, ids){
-            var html = '';
-            if (typeof id != 'undefined' && id) { 
-			    document.getElementById("inpKecamatan").disabled = false;
-                xhrp_ddKecamatan && xhrp_ddKecamatan.abort();
-                xhrp_ddKecamatan = $.ajax({
-                    url : "<?php echo site_url('registrasi/kecamataninj');?>",
-                    method : "POST",
-                    data : {id: id},
-                    dataType : 'json',
-                    beforeSend: function() { 
-                    }
-                })
-                .done(function(data) {
-                        var i;
-                        html += '<option value="" >&nbsp;</option>';
-                        for(i=0; i<data.length; i++){
-                            html += '<option value='+data[i].id_kecamatan+'>'+data[i].nama+'</option>';
-                        }
-                        $('#inpKecamatan').html(html);
-                })
-                .fail(function(reason) {
-                    //toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-                })
-                .always(function() {
-                    $('#inpKecamatan').val(ids).select2({ theme: 'bootstrap4' })
-                });
-            }
-        }
-        function promchange_ddKecamatan(id, ids){
-           var html = '';
-            if (typeof id != 'undefined' && id) { 
-			    document.getElementById("inpKelurahan").disabled = false;
-                xhrp_ddKelurahan && xhrp_ddKelurahan.abort();
-                xhrp_ddKelurahan = $.ajax({
-                    url : "<?php echo site_url('registrasi/kelurahaninj');?>",
-                    method : "POST",
-                    data : {id: id},
-                    dataType : 'json',
-                    beforeSend: function() {
-                        html += '<option value="" >&nbsp;</option>';
-                    }
-                })
-                .done(function(data) {
-                    var i;
-                    for(i=0; i<data.length; i++){
-                        html += '<option value='+data[i].id_kelurahan+'>'+data[i].nama+'</option>';
-                    }
-                    $('#inpKelurahan').html(html);
-                })
-                .fail(function(reason) {
-                    //toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-                })
-                .always(function() {
-                    $('#inpKelurahan').val(ids).select2({ theme: 'bootstrap4' })
-                });
-            }
-        }
-
-        function promchange_ddKelurahan(idc){
-            $('#inpKelurahan').val(idc).trigger('change');
-        }
-
-        function clrpCari(){
-            document.getElementById("crformDataPasien").reset();
-        }
-
-        $(document).on('submit', '#crformDataPasien', function(event) {
-            event.preventDefault();
-
-            tblListdatacarip = $("#examplepcari").DataTable({
-                "destroy": true,
-                "responsive": true, "lengthChange": true, "autoWidth": false,
-                // "buttons": ["colvis",],
-                "columnDefs": [ { orderable: false, targets: -1 }],
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                ajax: {
-                    url:  "<?php echo site_url('/registrasi/pasien/loadtabelcari');?>",
-                    type: 'post',
-                    dataType: 'json',
-                    data: function ( d ) {
-                        d.crinpNoRM =  $('#crinpNoRM').val();
-                        d.crinpNama =  $('#crinpNama').val();
-                    },
-                    beforeSend: function() {
-                        // showLoadingNotification();
-                    }
-                },
-                "columnDefs": [
-                    // { "visible": false, "targets": 0 }
-                ],
-                columns: [
-                    {
-                        "data": null,
-                        render: function (data, type, full, meta) {
-                            ikon_hiu = '<div class="btn-group btn-group-sm"><button onClick="funcambil(\''+data.id_pasien+'\')" type="button" class="btn btn-info"> <i class="fas fa-eye"></i> Pilih </button></div>';
-                            return ikon_hiu;
-                        },
-                        "width":"50"
-                    },
-                    {"data": "kode_rm",  "width":"100"},
-                    {"data": "nama", "width":"175"},
-                    {"data": "tgl_lahir", "width":"100"},
-                    {"data": "alamat"},
-                ],
-                rowCallback: function (row, data, index) {
-                },
-                initComplete: function (settings, json) {
-                    // hideLoadingNotification();
-                },
-                drawCallback: function () {
-                    // hideLoadingNotification();
-                },
-            }).buttons().container().appendTo('#examplepcari_wrapper .col-md-6:eq(0)');
-        });
-
-        async function funcambil(id){
-            if (typeof id != 'undefined' && id) {
-                xhrp_ambil && xhrp_ambil.abort();
-                xhrp_ambil = $.ajax({
-                    url : "<?php echo site_url('registrasi/pasien/ambilpasien')?>",
-                    type: "POST",
-                    dataType: "JSON",
-                    data: {id: id},
-                    async : true,
-                    dataType : 'json',
-                    beforeSend: function() { 
-                        // clearDataPasien('cls');
-                    }
-                })
-                .done(function(data) {
-                    if(data.status){
-                        console.log(data);
-                        if (typeof data.data.kode_rm != 'undefined' && data.data.kode_rm) {
-                            $('#inpRM_r').val(data.data.kode_rm);
-                        }
-                        if (typeof data.data.nama != 'undefined' && data.data.nama) {
-                            $('#inpNama').val(data.data.nama);
-                        }
-                        if (typeof data.data.alamat != 'undefined' && data.data.alamat) {
-                            $('#inpAlamat').text(data.data.alamat);
-                        }
-                        if (typeof data.data.no_telp != 'undefined' && data.data.no_telp) {
-                            $('#inpPhone').val(data.data.no_telp);
-                        }
-                        if (typeof data.data.id_pernikahan != 'undefined' && data.data.id_pernikahan) {
-                            $('#inpPernikahan').val(data.data.id_pernikahan).trigger('change');
-                        }
-                        $('#inp_tgl_lahir').val(data.data.tgl_lahir_f);
-                        $('#inpPekerjaan').val(data.data.id_pekerjaan).trigger('change');
-                        $('#inpRefProponsi').val(data.data.id_propinsi).select2({ theme: 'bootstrap4' });
-                        promchange_profinsi(data.data.id_propinsi, data.data.id_kabkota);
-                        promchange_ddKabKota(data.data.id_kabkota, data.data.id_kecamatan);
-                        promchange_ddKecamatan(data.data.id_kecamatan, data.data.id_kelurahan);
-                            
-                        if(data.data.jk == 1){
-                            $('#inpJKLaki').prop('checked', true); 
-                            $('#inpJKPerempuan').prop('checked', false); 
-                        }else if(data.data.jk == 2){
-                            $('#inpJKLaki').prop('checked', false); 
-                            $('#inpJKPerempuan').prop('checked', true); 
-                        }
-                       
-                     
-                        $('#modal-xl-caripasien').modal('toggle'); 
-                    }
-                })
-                .fail(function(reason) {
-                    toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-                })
-                .always(function() {});
-            }
-		}
-    
-    // JS FOR TAB PASIEN//
-    //_END_##################################//
-    //--------------------------------------//
-     // JS FOR TAB PAKET//
-    //_START_##############################//
-    $(document).on('submit', '#form_dmedis', function(event) {
-        event.preventDefault();
-        
-        var  nik = document.getElementById("inpnik").value;
-        if (typeof nik != 'undefined' && nik) {
-                Swal.fire({
-                    title: 'Pendaftaran Medis',
-                    text: "Apakah yakin ingin mendaftarkan pasien ini!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'Yes, Simpan',
-                    cancelButtonText: 'Tidak, nati saja',
-                    reverseButtons: true
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'berhasil mengunakan paket ini',
-                            showConfirmButton: false,
-                            timer: 1500
-                        }).then(function() {
-                            $("html, body").animate({scrollTop: 0}, 500);
-                            stepper1.next();
-                        });
-                    } else if (result.dismiss === Swal.DismissReason.cancel) {
-                        update_paket();
-                    }
-                })
-        }else{
-            Swal.fire({
-                position: 'top-end',
-                icon: 'warning',
-                title: 'Data pasien tidak di keteahui',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(function() {
-                $("html, body").animate({scrollTop: 0}, 500);
-                // stepper1.previous();
+                    $('#inpKecamatan').html(html);
+            })
+            .fail(function(reason) {
+                //toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
+            })
+            .always(function() {
+                $('#inpKecamatan').val(ids).select2({ theme: 'bootstrap4' })
             });
         }
+    }
+    function promchange_ddKecamatan(id, ids){
+        var html = '';
+        if (typeof id != 'undefined' && id) { 
+            document.getElementById("inpKelurahan").disabled = false;
+            xhrp_ddKelurahan && xhrp_ddKelurahan.abort();
+            xhrp_ddKelurahan = $.ajax({
+                url : "<?php echo site_url('registrasi/kelurahaninj');?>",
+                method : "POST",
+                data : {id: id},
+                dataType : 'json',
+                beforeSend: function() {
+                    html += '<option value="" >&nbsp;</option>';
+                }
+            })
+            .done(function(data) {
+                var i;
+                for(i=0; i<data.length; i++){
+                    html += '<option value='+data[i].id_kelurahan+'>'+data[i].nama+'</option>';
+                }
+                $('#inpKelurahan').html(html);
+            })
+            .fail(function(reason) {
+                //toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
+            })
+            .always(function() {
+                $('#inpKelurahan').val(ids).select2({ theme: 'bootstrap4' })
+            });
+        }
+    }
+
+    function promchange_ddKelurahan(idc){
+        $('#inpKelurahan').val(idc).trigger('change');
+    }
+
+    function clrpCari(){
+        document.getElementById("crformDataPasien").reset();
+    }
+
+    $(document).on('submit', '#crformDataPasien', function(event) {
+        event.preventDefault();
+
+        tblListdatacarip = $("#examplepcari").DataTable({
+            "destroy": true,
+            "responsive": true, "lengthChange": true, "autoWidth": false,
+            // "buttons": ["colvis",],
+            "columnDefs": [ { orderable: false, targets: -1 }],
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            ajax: {
+                url:  "<?php echo site_url('/registrasi/pasien/loadtabelcari');?>",
+                type: 'post',
+                dataType: 'json',
+                data: function ( d ) {
+                    d.crinpNoRM =  $('#crinpNoRM').val();
+                    d.crinpNama =  $('#crinpNama').val();
+                },
+                beforeSend: function() {
+                    // showLoadingNotification();
+                }
+            },
+            "columnDefs": [
+                // { "visible": false, "targets": 0 }
+            ],
+            columns: [
+                {
+                    "data": null,
+                    render: function (data, type, full, meta) {
+                        ikon_hiu = '<div class="btn-group btn-group-sm"><button onClick="funcambil(\''+data.id_pasien+'\')" type="button" class="btn btn-info"> <i class="fas fa-eye"></i> Pilih </button></div>';
+                        return ikon_hiu;
+                    },
+                    "width":"50"
+                },
+                {"data": "kode_rm",  "width":"100"},
+                {"data": "nama", "width":"175"},
+                {"data": "tgl_lahir", "width":"100"},
+                {"data": "alamat"},
+            ],
+            rowCallback: function (row, data, index) {
+            },
+            initComplete: function (settings, json) {
+                // hideLoadingNotification();
+            },
+            drawCallback: function () {
+                // hideLoadingNotification();
+            },
+        }).buttons().container().appendTo('#examplepcari_wrapper .col-md-6:eq(0)');
     });
 
-    function save_paket(){
-        var  ide = document.getElementById("inpRM_r").value; //id pasien di dbs
-        var  idm = document.getElementById("inpp_id").value;
-
-        var form = $('#form_dpaket')[0];
-		var postData = new FormData(form);
-        postData.append('inpRM_r', ide);
-
-        xhrpk_save && xhrpk_save.abort();
-        xhrpk_save = $.ajax({
-            url : "<?php echo site_url('registrasi/paket/save');?>",
-            method : "POST",
-            data: postData,
-            dataType : 'json',
-            enctype: 'multipart/form-data',
-            processData: false,
-            contentType: false,
-            beforeSend: function() {
-                // Swal.fire({
-                //     title: 'Mohon Menunggu...',
-                //     html: 'Sedang Proses Menyimpan Data',
-                //     allowEscapeKey: false,
-                //     allowOutsideClick: false,
-                //     didOpen: () => {
-                //         Swal.showLoading()
-                //     }
-                // })
-            }
-        })
-        .done(function(data) {
-            console.log(data);
-            swal.close();
-            if(data.status){
-                swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: data.msg,
-                    showConfirmButton: false,
-                    timer: 1500
-                }).then(function() {
-                    if(data.code != '201'){
-                        document.getElementById("inpp_id").value = data.insert;
-                    }
-                    stepper1.next();
-                    $("html, body").animate({scrollTop: 0}, 500);
-                });
-            }else{
-                toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-            }
-        })
-        .fail(function(reason) {
-            toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-        })
-        .always(function() {});
-    }
-
-    function update_paket(){
-        var  ide = document.getElementById("inpRM_r").value; //id pasien di dbs
-        var  idm = document.getElementById("inpp_id").value;
-
-        var form = $('#form_dpaket')[0];
-		var postData = new FormData(form);
-        postData.append('inpRM_r', ide);
-
-        xhrpk_update && xhrpk_update.abort();
-        xhrpk_update = $.ajax({
-            url : "<?php echo site_url('registrasi/paket/update');?>",
-            method : "POST",
-            data: postData,
-            dataType : 'json',
-            enctype: 'multipart/form-data',
-            processData: false,
-            contentType: false,
-            beforeSend: function() {
-                // Swal.fire({
-                //     title: 'Mohon Menunggu...',
-                //     html: 'Sedang Proses Menyimpan Data',
-                //     allowEscapeKey: false,
-                //     allowOutsideClick: false,
-                //     didOpen: () => {
-                //         Swal.showLoading()
-                //     }
-                // })
-            }
-        })
-        .done(function(data) {
-            console.log(data);
-            swal.close();
-            if(data.status){
-                swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: data.msg,
-                    showConfirmButton: false,
-                    timer: 1500
-                }).then(function() {
-                    if(data.code != '201'){
-                        document.getElementById("inpp_id").value = data.insert;
-                    }
-                    stepper1.next();
-                    $("html, body").animate({scrollTop: 0}, 500);
-                });
-            }else{
-                toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-            }
-        })
-        .fail(function(reason) {
-            toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');
-        })
-        .always(function() {});
-    }
-
-    function cari_hpaket(){
-        var  idm = document.getElementById("inpRM_r").value;
-        if (typeof idm != 'undefined' && idm) {
-            tblListdatacaripaket = $("#example_paketcari").DataTable({
-                "destroy": true,
-                "responsive": true, "lengthChange": true, "autoWidth": false,
-                // "buttons": ["colvis",],
-                "columnDefs": [ { orderable: false, targets: -1 }],
-                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                ajax: {
-                    url:  "<?php echo site_url('/registrasi/paket/loadtabelcari');?>",
-                    type: 'post',
-                    dataType: 'json',
-                    data: function ( d ) {
-                        d.crinpNoRM =  $('#inpRM_r').val();
-                    },
-                    beforeSend: function() {
-                        // showLoadingNotification();
-                    }
-                },
-                "columnDefs": [
-                    // { "visible": false, "targets": 0 }
-                ],
-                columns: [
-                    {
-                        "data": null,
-                        render: function (data, type, full, meta) {
-                            ikon_hiu = '<div class="btn-group btn-group-sm"><button onClick="funcambil_paket(\''+data.id_beli_paket+'\')" type="button" class="btn btn-info"> <i class="fas fa-eye"></i> Pilih </button></div>';
-                            return ikon_hiu;
-                        },
-                        "width":"50"
-                    },
-                    {"data": "kode_rm",  "width":"100"},
-                    {"data": "namap", "width":"175"},
-                    {"data": "tgl_daftar", "width":"100"},
-                    {"data": "nama_paket", "width":"100"},
-                    {"data": "harga"},
-                    {"data": "harga"},
-                ],
-                rowCallback: function (row, data, index) {
-                },
-                initComplete: function (settings, json) {
-                    // hideLoadingNotification();
-                },
-                drawCallback: function () {
-                    // hideLoadingNotification();
-                },
-            }).buttons().container().appendTo('#examplepcari_wrapper .col-md-6:eq(0)');
-
-            $('#modal-xl-caripaket').modal('show');
-        }else{
-            toastr.warning('Harap isikan data pasien dahulu');
-        }
-    };
-
-    async function funcambil_paket(id){
+    async function funcambil(id){
         if (typeof id != 'undefined' && id) {
-            xhrpk_ambil && xhrpk_ambil.abort();
-            xhrpk_ambil = $.ajax({
-                url : "<?php echo site_url('registrasi/paket/ambilpaket')?>",
+            xhrp_ambil && xhrp_ambil.abort();
+            xhrp_ambil = $.ajax({
+                url : "<?php echo site_url('registrasi/pasien/ambilpasien')?>",
                 type: "POST",
                 dataType: "JSON",
                 data: {id: id},
@@ -1435,16 +1138,38 @@
             .done(function(data) {
                 if(data.status){
                     console.log(data);
-                    if (typeof data.data.id_beli_paket != 'undefined' && data.data.id_beli_paket) {
-                        $('#inpp_id').val(data.data.id_beli_paket);
+                    if (typeof data.data.kode_rm != 'undefined' && data.data.kode_rm) {
+                        $('#inpRM_r').val(data.data.kode_rm);
                     }
-                    if (typeof data.data.id_paket != 'undefined' && data.data.id_paket) {
-                        $('#inpmMedisPaket').val(data.data.id_paket).trigger('change');
+                    if (typeof data.data.nama != 'undefined' && data.data.nama) {
+                        $('#inpNama').val(data.data.nama);
                     }
-                    if (typeof data.data.jenis_bayar != 'undefined' && data.data.jenis_bayar) {
-                        $('#inppkJenisbayar').val(data.data.jenis_bayar).trigger('change');
+                    if (typeof data.data.alamat != 'undefined' && data.data.alamat) {
+                        $('#inpAlamat').text(data.data.alamat);
                     }
-                    $('#modal-xl-caripaket').modal('toggle'); 
+                    if (typeof data.data.no_telp != 'undefined' && data.data.no_telp) {
+                        $('#inpPhone').val(data.data.no_telp);
+                    }
+                    if (typeof data.data.id_pernikahan != 'undefined' && data.data.id_pernikahan) {
+                        $('#inpPernikahan').val(data.data.id_pernikahan).trigger('change');
+                    }
+                    $('#inp_tgl_lahir').val(data.data.tgl_lahir_f);
+                    $('#inpPekerjaan').val(data.data.id_pekerjaan).trigger('change');
+                    $('#inpRefProponsi').val(data.data.id_propinsi).select2({ theme: 'bootstrap4' });
+                    promchange_profinsi(data.data.id_propinsi, data.data.id_kabkota);
+                    promchange_ddKabKota(data.data.id_kabkota, data.data.id_kecamatan);
+                    promchange_ddKecamatan(data.data.id_kecamatan, data.data.id_kelurahan);
+                        
+                    if(data.data.jk == 1){
+                        $('#inpJKLaki').prop('checked', true); 
+                        $('#inpJKPerempuan').prop('checked', false); 
+                    }else if(data.data.jk == 2){
+                        $('#inpJKLaki').prop('checked', false); 
+                        $('#inpJKPerempuan').prop('checked', true); 
+                    }
+                    
+                    
+                    $('#modal-xl-caripasien').modal('toggle'); 
                 }
             })
             .fail(function(reason) {
@@ -1452,10 +1177,9 @@
             })
             .always(function() {});
         }
-
     }
-
-    // JS FOR TAB PAKET//
+    
+    // JS FOR TAB PASIEN//
     //_END_##################################//
     //--------------------------------------//
     // JS FOR TAB MEDIS//
@@ -1463,40 +1187,10 @@
     $(document).on('submit', '#form_dmedis', function(event) {
         event.preventDefault();
         
-        var  idm = document.getElementById("inpm_id").value;
-        var  idrm = document.getElementById("inpRM_r").value;
-        if (typeof idrm != 'undefined' && idrm) {
-            if (typeof idm != 'undefined' && idm) {
-                console.log('adas 123');
-                Swal.fire({
-                    title: 'Update Data',
-                    text: "Apakah yakin ingin memperbaharui data ini!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'Yes, Perbaharui data',
-                    cancelButtonText: 'Tidak, Perbaharui data',
-                    reverseButtons: true
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        save_medis();
-                    } else if (result.dismiss === Swal.DismissReason.cancel) {
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'data berhasil tidak dirubah',
-                            showConfirmButton: false,
-                            timer: 1500
-                        }).then(function() {
-                            $("html, body").animate({scrollTop: 0}, 500);
-                            // document.getElementById("namePasienMedis").innerHTML = document.getElementById("inpNama").value;
-                            stepper1.next();
-                        });
-                    }
-                })
-            }else{
-                console.log('adas');
-                save_medis();
-            }
+        var  idk = document.getElementById("inpnik").value;
+        var  idp = document.getElementById("inp_idpasien").value;
+        if (typeof idk != 'undefined' && idk) {
+            save_medis();
         }else{
             Swal.fire({
                 position: 'top-end',
@@ -1511,12 +1205,15 @@
         }
     });
     function save_medis(){
-        var  ide = document.getElementById("inpRM_r").value; //id pasien di dbs
-        var  idm = document.getElementById("inpm_id").value;
+        var  idk = document.getElementById("inpnik").value;
+        var  idp = document.getElementById("inp_idpasien").value;
+        var  inpRM = document.getElementById("inpRM").value;
 
         var form = $('#form_dmedis')[0];
 		var postData = new FormData(form);
-        postData.append('inpRM_r', ide);
+        postData.append('inpmNik', idk);
+        postData.append('inp_idpasien', idp);
+        postData.append('inpRM', inpRM);
 
         xhrm_save && xhrm_save.abort();
         xhrm_save = $.ajax({
@@ -1528,19 +1225,18 @@
             processData: false,
             contentType: false,
             beforeSend: function() {
-                // Swal.fire({
-                //     title: 'Mohon Menunggu...',
-                //     html: 'Sedang Proses Menyimpan Data',
-                //     allowEscapeKey: false,
-                //     allowOutsideClick: false,
-                //     didOpen: () => {
-                //         Swal.showLoading()
-                //     }
-                // })
+                Swal.fire({
+                    title: 'Mohon Menunggu...',
+                    html: 'Sedang Proses Menyimpan Data',
+                    allowEscapeKey: false,
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading()
+                    }
+                });
             }
         })
         .done(function(data) {
-            console.log(data);
             swal.close();
             if(data.status){
                 swal.fire({
@@ -1550,11 +1246,7 @@
                     showConfirmButton: false,
                     timer: 1500
                 }).then(function() {
-                    if(data.code != '201'){
-                        document.getElementById("inpm_id").value = data.insert;
-                    }
-                    stepper1.next();
-                    $("html, body").animate({scrollTop: 0}, 500);
+                    window.location = "<?php echo site_url('/pemeriksaan')?>"
                 });
             }else{
                 toastr.warning('Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator');

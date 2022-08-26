@@ -25,95 +25,63 @@ class Rmedis extends BaseController {
         $data = $request->getPost();
         if ($is_ajax) {
 
-            $inpmFKemampuan = $request->getVar('inpmFKemampuan');
-            if(!empty($inpmFKemampuan)){
-                $inpmFKemampuan = implode("|" , $inpmFKemampuan);
+        //    var_dump( $request->getPost());
+        //    die();
+
+           $nik = !empty($request->getPost('inpmNik')) ? $request->getPost('inpmNik'): null;
+           if(empty($nik)){
+                $resp['status'] = false;
+                $resp['code'] = '204';
+                $resp['message'] = 'Maaf Data NIK harus ada';
+                return $this->response->setJSON($resp);
+                die();
             }
-           
+            
             $data = array(
-				// 'id_medis' =>  $request->getPost('inpm_id'),
-				'kode_rm' =>  $request->getPost('inpRM_r'),
-				'anamesis' => !empty($request->getPost('inpmMedisAnamnesis')) ? $request->getPost('inpmMedisAnamnesis'): null,
-				'keluhan_utama' => !empty($request->getPost('inpmKeluhanUtamaMedis')) ? $request->getPost('inpmKeluhanUtamaMedis'): null,
-				'riwayat_penyakit_sekarang' => !empty($request->getPost('inpmKeluhanSekarangMedis')) ? $request->getPost('inpmKeluhanSekarangMedis'): null,
-				'riwayat_penyakit' => !empty($request->getPost('inpmKeluhanDahuluMedis')) ? $request->getPost('inpmKeluhanDahuluMedis'): null,
-				'td' => !empty($request->getPost('inpmSistol')) ? $request->getPost('inpmSistol'): '',
-				'hr' => !empty($request->getPost('inpmDiastole')) ? $request->getPost('inpmDiastole'): '',
-				'suhu' => !empty($request->getPost('inpmSuhu')) ? $request->getPost('inpmSuhu'): '',
-				'rr' => !empty($request->getPost('inpmNafas')) ? $request->getPost('inpmNafas'): '',
-				'skor_nyeri' => '',
-				'kfungsioinal' =>$inpmFKemampuan,
-				'psk_muskuloskeletal' => !empty($request->getPost('inpmMedisMuskuloskeletal')) ? $request->getPost('inpmMedisMuskuloskeletal'): null,
-				'psk_neuromuskuler' => !empty($request->getPost('inpmMedisNeuromuskuler')) ? $request->getPost('inpmMedisNeuromuskuler'): null,
-				'psk_karfiopulmonal' => !empty($request->getPost('inpmMedisKardiopulmonalr')) ? $request->getPost('inpmMedisKardiopulmonalr'): null,
-				'psk_integumen' => !empty($request->getPost('inpmMedisIntegumen')) ? $request->getPost('inpmMedisIntegumen'): null,
-				'pk_muskuloskeletal' => !empty($request->getPost('inpmMedisPengukuranMuskuloskeletal')) ? $request->getPost('inpmMedisPengukuranMuskuloskeletal'): null,
-				'pk_neuromuskuler' => !empty($request->getPost('inpmMedisPengukuranNeuromuskuler')) ? $request->getPost('inpmMedisPengukuranNeuromuskuler'): null,
-				'pk_karfiopulmonal' => !empty($request->getPost('inpmMedisPengukuranKardiopulmonalr')) ? $request->getPost('inpmMedisPengukuranKardiopulmonalr'): null,
-				'pk_integumen' => !empty($request->getPost('inpmMedisPengukuranIntegumen')) ? $request->getPost('inpmMedisPengukuranIntegumen'): null,
-				'df_impairment' => !empty($request->getPost('inpmMedisDFImpairment')) ? $request->getPost('inpmMedisDFImpairment'): null,
-				'df_limitation' => !empty($request->getPost('inpmMedisDFFunctional')) ? $request->getPost('inpmMedisDFFunctional'): null,
-				'df_restriction' => !empty($request->getPost('inpmMedisDFParticipation')) ? $request->getPost('inpmMedisDFParticipation'): null,
-				'rencana_terapi' => !empty($request->getPost('inpmMedisRencanaTerapi')) ? $request->getPost('inpmMedisRencanaTerapi'): null,
-				'intervensi' => !empty($request->getPost('inpmMedisIntervensi')) ? $request->getPost('inpmMedisIntervensi'): null,
-				'evaluasi' => !empty($request->getPost('inpmMedisEvaluasi')) ? $request->getPost('inpmMedisEvaluasi'): null,
-				// 'id_user_medis' => !empty($request->getPost('inpPekerjaan')) ? $request->getPost('inpPekerjaan'): null,
-				// 'updatedate' => !empty($request->getPost('inpPekerjaan')) ? $request->getPost('inpPekerjaan'): null,
+				// 'id_medis' =>  '1',
+				// 'id_pasien' => !empty($request->getPost('inpbpjs')) ? $request->getPost('inpbpjs'): null,
+				'nik' => $nik,
+				'no_rm' => !empty($request->getPost('inpRM')) ? $request->getPost('inpRM'): null,
+
+				'berat' => !empty($request->getPost('inpmBerat')) ? $request->getPost('inpmBerat'): null,
+				'tinggi' => !empty($request->getPost('inpmTinggi')) ? $request->getPost('inpmTinggi'): null,
+				'lingkar_perut' => !empty($request->getPost('inpmPerut')) ? $request->getPost('inpmPerut'): null,
+				'suhu' => !empty($request->getPost('inpmSuhu')) ? $request->getPost('inpmSuhu'): null,
+				'sistole' => !empty($request->getPost('inpmSistol')) ? $request->getPost('inpmSistol'): null,
+				'diastole' => !empty($request->getPost('inpmDiastole')) ? $request->getPost('inpmDiastole'): null,
+				'frek_nadi' => !empty($request->getPost('inpmNadi')) ? $request->getPost('inpmNadi'): null,
+				'pernafasan' => !empty($request->getPost('inpmNafas')) ? $request->getPost('inpmNafas'): null,
+				'lab_kolestrol' => !empty($request->getPost('inpmKolestrol')) ? $request->getPost('inpmKolestrol'): null,
+				'lab_guladarah' => !empty($request->getPost('inpmGula')) ? $request->getPost('inpmGula'): null,
+				'lab_asam_urat' => !empty($request->getPost('inpmAsamurat')) ? $request->getPost('inpmAsamurat'): null,
+				
+                'anamnesa' => !empty($request->getPost('inpmAnamnesis')) ? $request->getPost('inpmAnamnesis'): null,
+				'keluhan_utama' => !empty($request->getPost('inpmKeluhanUtama')) ? $request->getPost('inpmKeluhanUtama'): null,
+				'keluhan_tambahan' => !empty($request->getPost('inpmRiwayatPenyakit_now')) ? $request->getPost('inpmRiwayatPenyakit_now'): null,
+				'riwayat_penyakit' => !empty($request->getPost('inpmRiwayatPenyakit')) ? $request->getPost('inpmRiwayatPenyakit'): null,
+				'ro_hcl' => !empty($request->getPost('inpmObat_hct')) ? $request->getPost('inpmObat_hct'): null,
+				'ro_captopril' => !empty($request->getPost('inpmObat_captopril')) ? $request->getPost('inpmObat_captopril'): null,
+				'ro_valsarta' => !empty($request->getPost('inpmObat_valsarta')) ? $request->getPost('inpmObat_valsarta'): null,
+				'ro_amlodipine' => !empty($request->getPost('inpmObat_amlodipine')) ? $request->getPost('inpmObat_amlodipine'): null,
+				'ro_text' => !empty($request->getPost('inpmRiwayat_obat')) ? $request->getPost('inpmRiwayat_obat'): null,
+				'riwayat_alergi' => !empty($request->getPost('inpmRiwayatAlergi')) ? $request->getPost('inpmRiwayatAlergi'): null,
+				'riwayat_keluarga' => !empty($request->getPost('inpmRiwayatKeluarga')) ? $request->getPost('inpmRiwayatKeluarga'): null,
+
+				// 'kode_faskes' => !empty($request->getPost('inpbpjs')) ? $request->getPost('inpbpjs'): null,
+				'id_user' =>  $this->logged_in,
+				'insertdate' =>  date("Y-m-d H:i:s"),
 			);
 
-            $data_paket = array(
-				'id_beli_paket' => !empty($request->getPost('inpmMedisPaket')) ? $request->getPost('inpmMedisPaket'): null,
-			);
-
-            // $inpkd_id = $request->getPost('inpm_id');
-            $inpkd_id = !empty($request->getPost('inpm_id')) ? $request->getPost('inpm_id'): null;
-
-            if(empty($inpkd_id)){
-                // try {
-                //     $user = $userModel->find($id);
-                // } catch (\Exception $e) {
-                //     die($e->getMessage());
-                // }
-                $data['id_user'] = $this->logged_in;
-                $data['insertdate'] = date("Y-m-d H:i:s");
-
-                try {
-                    $resp['insert'] = $this->registrasi_medis_model->medis_add($data);
-
-                    $data_paket['id_medis'] = $resp['insert'];
-                    $data_paket['id_user_pendaftaran'] = $this->logged_in;
-                    $data_paket['insertdate_pendaftaran'] = date("Y-m-d H:i:s");
-                    $this->registrasi_medis_model->medis_monitoring_add($data_paket);
-
-                    $resp['info'] = "new";
-                    $resp['status'] = true;
-                    $resp['msg'] = "Data berhasil di simpan!";
-                    $resp['code'] = '200';
-                } catch (\Exception $e) {
-                    // die($e->getMessage());
-                    $resp['status'] = false;
-                    $resp['msg'] = $e->getMessage();
-                    $resp['code'] = '200';
-                }
-            }else{
-			    $cek_rm = $this->registrasi_medis_model->medis_by_id($inpkd_id);
-                if((count($cek_rm)>0)){
-                    $data_paket['id_medis'] = $cek_rm;
-                    $data_paket['id_user'] = $this->logged_in;
-                    $data_paket['insertdate'] = date("Y-m-d H:i:s");
-                    $this->registrasi_medis_model->medis_monitoring_add($data_paket);
-
-
-                    $resp['insert'] = $this->registrasi_medis_model->medis_update($inpkd_id, $data);	
-                    $resp['info'] = "update";
-                    $resp['status'] = true;
-                    $resp['msg'] = "Data berhasil di update!";
-                    $resp['code'] = '201';
-                }else{
-                    $resp['status'] = false;
-                    $resp['msg'] = 'maaf, ada kesalahan di data';
-                    $resp['code'] = '200';
-                }
+            try {
+                $resp['insert'] = $this->registrasi_medis_model->medis_add($data);	
+                $resp['info'] = "new";
+                $resp['status'] = true;
+                $resp['msg'] = "Data berhasil di simpan!";
+                $resp['code'] = '200';
+            } catch (\Exception $e) {
+                $resp['status'] = false;
+                $resp['msg'] = $e->getMessage();
+                $resp['code'] = '404';
             }
         } else {
             $resp['status'] = false;
