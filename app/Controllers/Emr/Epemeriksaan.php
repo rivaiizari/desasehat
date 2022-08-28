@@ -88,29 +88,27 @@ class Epemeriksaan extends BaseController {
 
 	public function pperiksa_dokter($id=false){
 		$session = \Config\Services::session();
-		// var_dump($id);die();
-		if(!empty($id)){
-			// $c_isnakes =  $this->emr_epemeriksaan_model->c_nakes($this->logged_in);
-			// $ab = $this->emr_epemeriksaan_model->getCekTeleFas($id, $this->logged_in);
-			// if(count($ab)>0){
+		$master_model = new Master_model();
 
-			// }else{
-			// 	$resp['msg'] = $session->setFlashdata('info_ses', 'Pemeriksaan Medis sudah diperiksa oleh dokter jaga');
-			// 	return redirect()->to(site_url('/pemeriksaan'));
-			// }
+		$dprofile_type = getprofile_type_byid($this->logged_in);
+		if(!empty($id)){
 			$data_m = [
 				'id' => $id,
 				'idLog' => $this->logged_in,
 			];
-			$getmedis_detail = $this->emr_epemeriksaan_model->m_getmedis_detail($data_m);
+
 			$getmedis_penginput = $this->emr_epemeriksaan_model->m_getmedis_penginput($data_m);
-			// var_dump($getmedis_penginput->nama_profile);die();
+			$getmedis_detail = $this->emr_epemeriksaan_model->m_getmedis_detail($data_m);
+			// var_dump($getmedis_detail);die();
+			// var_dump($getmedis_penginput);die();
+			// var_dump($dprofile_type);die();
 
 			$data_in = [
 				'data_title' => 'List Pemeriksaan',
 				'idLog' => $this->logged_in,
-				'data_penginput' => $getmedis_detail,
+				'data_penginput' => $getmedis_penginput,
 				'data_detail' => $getmedis_detail,
+				'data_ptype' => $dprofile_type,
 			];
 			return view('emr/epemeriksaan_dokter_view', $data_in);
 		}else{
@@ -119,6 +117,73 @@ class Epemeriksaan extends BaseController {
 		}
         
     }
+
+	public function psave(){
+		$request = \Config\Services::request();
+        $is_ajax = $request->isAJAX();
+        $data = $request->getPost();
+        if ($is_ajax) {
+			// var_dump($request->getPost());die();
+            $idm =  !empty($request->getPost('imp_idm')) ? $request->getPost('imp_idm'): null;
+            $ide =  !empty($request->getPost('inpp_ide')) ? $request->getPost('inpp_ide'): null;
+
+			if(empty($idm)){
+                $resp['status'] = false;
+				$resp['code'] = '204';
+				$resp['info'] = 'Maaf Data medis tidak diketahui';
+				$resp['message'] = 'Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator';
+				return $this->response->setJSON($resp);
+				die();
+            }
+           
+            $data = array(
+				// 'id_expertise' =>  $request->getPost('inpNoBPJS'),
+				'id_medis' => $idm,
+				'pemeriksaan' => !empty($request->getPost('impp_pemeriksaan')) ? $request->getPost('impp_pemeriksaan'): null,
+				'obat' => !empty($request->getPost('impp_obat')) ? $request->getPost('impp_obat'): null,
+			);
+
+            $data_cek = array(
+				'idm' =>  $idm,
+				'ide' =>  $ide,
+			);
+		    $cek_ide = $this->emr_epemeriksaan_model->cdata_periksa($data_cek);
+            if(empty($ide) && (count($cek_ide)>=1)){
+                $resp['status'] = false;
+				$resp['code'] = '204';
+				$resp['info'] = 'medis sudah memiliki jawaban';
+				$resp['message'] = 'Mohon maaf terjadi kesalahan, refresh halaman atau hubungi Administator';
+				return $this->response->setJSON($resp);
+				die();
+            }
+
+            if(empty($ide)){
+                $data['id_user'] =  $this->logged_in;
+                $data['insertdate'] = date("Y-m-d H:i:s");
+
+                $resp['insert'] = $this->emr_epemeriksaan_model->psave($data);	
+				$resp['info'] = "Data Baru";
+                $resp['status'] = true;
+                $resp['message'] = "Data berhasil di simpan!";
+                $resp['code'] = '200';
+            }else{
+			    $data['updated_id'] =  $this->logged_in;
+                $data['updated_at'] = date("Y-m-d H:i:s");
+
+                $resp['insert'] = $this->emr_epemeriksaan_model->pupdate($ide, $data);	
+                $resp['info'] = "update";
+                $resp['status'] = true;
+                $resp['message'] = "Data berhasil di update!";
+                $resp['code'] = '201';
+            }
+        } else {
+            $resp['status'] = false;
+            $resp['code'] = '403';
+            $resp['subtitle'] = 'FORBIDDEN';
+            $resp['message'] = 'No direct script access allowed';
+        }
+        return $this->response->setJSON($resp);
+	}
 
     
 }

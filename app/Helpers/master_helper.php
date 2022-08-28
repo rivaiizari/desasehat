@@ -220,6 +220,28 @@
             echo '</select>';
         }
     }
+
+
+    if (!function_exists('getprofile_type_byid')) {
+        function getprofile_type_byid($value = '') {
+            $model = new Master_model();
+            $getmedis_type = $model->get_isdokter_byid($value);
+
+            $data_m = [
+				'isdokter' => '0',
+				'isnakes' => '0',
+				'isapotik' => '0',
+			];
+
+            if(!empty($getmedis_type)){
+				$data_m['d_isdokter'] = $getmedis_type->isdokter;
+				$data_m['isnakes'] = $getmedis_type->isnakes;
+				$data_m['isapotik'] = $getmedis_type->isapotik;
+			}
+
+            return $data_m;
+        }
+    }
     
 
 

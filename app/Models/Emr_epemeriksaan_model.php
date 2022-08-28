@@ -62,7 +62,11 @@ class Emr_epemeriksaan_model extends Model {
        
         $query = $this->db->query("SELECT p.nama AS nama_pasien, TIMESTAMPDIFF(YEAR, p.tgl_lahir, CURDATE()) AS umur
         ,m.insertdate AS tdl_daftar, m.*
-        ,e.pemeriksaan AS e_pemeriksaan, e.obat AS e_obat
+        ,e.id_expertise AS ide, e.pemeriksaan AS e_pemeriksaan, e.obat AS e_obat
+        ,CASE
+            WHEN e.updated_at IS NOT NULL THEN e.updated_at
+            ELSE e.insertdate
+        END AS tgl_jawab
         FROM medis m
         JOIN pasien p ON p.nik = m.nik
         LEFT JOIN expertise e ON e.id_medis = m.id_medis
@@ -78,6 +82,7 @@ class Emr_epemeriksaan_model extends Model {
         }
        
         $query = $this->db->query("SELECT pf.nama_profile
+        ,up.nama AS nama_input
         ,m.insertdate AS tdl_daftar
         ,lp.nama AS nama_profinsi
         ,lkb.nama AS nama_kabkota
@@ -93,5 +98,36 @@ class Emr_epemeriksaan_model extends Model {
         WHERE m.deleted_at IS NULL
         AND m.id_medis = '".$data['id']."'");
         return $query->getRow();
+    }
+
+    
+    public function cdata_periksa($data = false){
+        $query = $this->db->query("SELECT m.id_medis, e.id_expertise
+        FROM medis m
+        JOIN expertise e ON e.id_medis = m.id_medis
+        WHERE m.id_medis = '".$data['idm']."'");
+        return $query->getResultArray();
+    }
+
+    public function psave($data){
+        // $query = $this->db->table('expertise')->insert($data);
+        // return  $this->db->insertID();
+
+        $this->db->transBegin();
+        $this->db->table('medis')->update(['status' => '4'], ['id_medis' => $data['id_medis']]);
+
+        $this->db->table('expertise')->insert($data);
+        if ($this->db->transStatus() === false) {
+            $this->db->transRollback();
+        } else {
+            $this->db->transCommit();
+            return  $this->db->insertID();
+        }
+    }
+
+    public function pupdate($idm, $data){
+        $this->db->table('medis')->update(['status' => '4'], ['id_medis' => $data['id_medis']]);
+
+        return $this->db->table('expertise')->update($data, ['id_expertise' => $idm]); 
     }
 }

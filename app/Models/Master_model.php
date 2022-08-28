@@ -18,7 +18,7 @@ class Master_model extends Model {
     }
 
     public function getNavMenuTemplate($id = false){
-        $query = $this->db->query('SELECT m.*
+        $query = $this->db->query("SELECT m.*
         ,CASE
             WHEN (SELECT COUNT(*) FROM menu mu WHERE mu.menu_parent = m.id_menu  AND mu.isaktif = 1) >= 1 THEN 1
             WHEN m.menu_parent IS NULL THEN 0
@@ -27,11 +27,11 @@ class Master_model extends Model {
         FROM menu m
         INNER JOIN menu_profile mp ON mp.id_menu = m.id_menu
         INNER JOIN users_profile up ON mp.id_profile = up.id_profile
-        WHERE up.id_user = '.$this->logged_in.'
+        WHERE up.id_user = '".$this->logged_in."'
         AND menu_parent IS NULL
 	    AND m.isaktif = 1
         AND mp.isaktif = 1
-        ORDER BY menu_urut, menu_parent, menu_text ASC');
+        ORDER BY menu_urut, menu_parent, menu_text ASC");
         return $query->getResultArray();
     }
 
@@ -235,10 +235,10 @@ class Master_model extends Model {
 
 
     public function get_isdokter_byid($id = false){
-        $query = $this->db->query("SELECT up.id_user, pf.isdokter, pf.isnakes
+        $query = $this->db->query("SELECT up.id_user, pf.isdokter, pf.isnakes, pf.isapotik
         FROM users_profile up
         JOIN users us ON up.id_user = us.id
-        JOIN PROFILE pf ON up.id_profile = pf.id_profile
+        JOIN profile pf ON up.id_profile = pf.id_profile
         WHERE us.id = '1'
         AND pf.isaktif = '1'
         AND up.id_user = '".$id."'");

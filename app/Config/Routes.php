@@ -109,10 +109,11 @@ $routes->group('registrasi', ['filter' => 'filterakses:2'], function ($routes) {
 	$routes->post('kelurahaninj', 'Master_modul::getAllKelurahan_inj');
 });
 
-$routes->group('pemeriksaan', function ($routes) {
+$routes->group('pemeriksaan', ['filter' => 'filterakses:3'], function ($routes) {
     $routes->get('/', 'Emr\Epemeriksaan::index');
     $routes->post('loadtabel', 'Emr\Epemeriksaan::loadtabel');
     $routes->post('batal', 'Emr\Epemeriksaan::pbatal');
+    $routes->post('save', 'Emr\Epemeriksaan::psave');
     $routes->get('periksa_dokter/(:num)', 'Emr\Epemeriksaan::pperiksa_dokter/$1');
 });
 

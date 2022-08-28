@@ -97,3 +97,27 @@ CRITICAL - 2022-08-26 05:00:32 --> Undefined property: stdClass::$nama_profile
 #8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
 #10 {main}
+CRITICAL - 2022-08-26 07:11:09 --> Undefined property: stdClass::$nama_profile
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_dokter_view.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp74\\htdo...', 85, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(115): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
+CRITICAL - 2022-08-26 19:05:21 --> Undefined property: stdClass::$nama_profile
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_dokter_view.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp74\\htdo...', 85, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(115): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}

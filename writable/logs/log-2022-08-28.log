@@ -1,0 +1,148 @@
+CRITICAL - 2022-08-28 08:28:25 --> Trying to get property 'isdokter' of non-object
+#0 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp74\\htdo...', 94, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
+ERROR - 2022-08-28 09:25:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND menu_parent IS NULL
+	    AND m.isaktif = 1
+        AND mp.isaktif = 1
+...' at line 11
+CRITICAL - 2022-08-28 09:25:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND menu_parent IS NULL
+	    AND m.isaktif = 1
+        AND mp.isaktif = 1
+...' at line 11
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT m.*\r\n   ...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT m.*\r\n   ...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT m.*\r\n   ...')
+#3 C:\xampp74\htdocs\desasehat\app\Models\Master_model.php(30): CodeIgniter\Database\BaseConnection->query('SELECT m.*\r\n   ...')
+#4 C:\xampp74\htdocs\desasehat\app\Helpers\master_helper.php(9): App\Models\Master_model->getNavMenuTemplate()
+#5 C:\xampp74\htdocs\desasehat\app\Views\layout\template.php(209): showNavMenuTemplate()
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('layout/template', Array, true)
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#10 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(119): view('emr/epemeriksaa...', Array)
+#11 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#12 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#13 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#16 {main}
+ERROR - 2022-08-28 09:26:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND menu_parent IS NULL
+	    AND m.isaktif = 1
+        AND mp.isaktif = 1
+...' at line 11
+CRITICAL - 2022-08-28 09:26:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND menu_parent IS NULL
+	    AND m.isaktif = 1
+        AND mp.isaktif = 1
+...' at line 11
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT m.*\r\n   ...', 0)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT m.*\r\n   ...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT m.*\r\n   ...')
+#3 C:\xampp74\htdocs\desasehat\app\Models\Master_model.php(30): CodeIgniter\Database\BaseConnection->query('SELECT m.*\r\n   ...')
+#4 C:\xampp74\htdocs\desasehat\app\Helpers\master_helper.php(9): App\Models\Master_model->getNavMenuTemplate()
+#5 C:\xampp74\htdocs\desasehat\app\Views\layout\template.php(209): showNavMenuTemplate()
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('layout/template', Array, true)
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#10 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(119): view('emr/epemeriksaa...', Array)
+#11 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#12 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#13 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#16 {main}
+CRITICAL - 2022-08-28 09:28:49 --> Object of class stdClass could not be converted to string
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#3 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(119): view('emr/epemeriksaa...', Array)
+#4 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#9 {main}
+CRITICAL - 2022-08-28 09:29:28 --> Cannot use object of type stdClass as array
+#0 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#3 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(119): view('emr/epemeriksaa...', Array)
+#4 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#9 {main}
+CRITICAL - 2022-08-28 09:37:52 --> Trying to get property 'd_isapotik' of non-object
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_dokter_view.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp74\\htdo...', 97, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(120): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
+CRITICAL - 2022-08-28 09:38:12 --> Undefined index: d_isapotik
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_dokter_view.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp74\\htdo...', 97, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(120): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
+CRITICAL - 2022-08-28 11:51:55 --> Trying to get property 'd_isdokter' of non-object
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_dokter_view.php(261): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp74\\htdo...', 261, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(112): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
+CRITICAL - 2022-08-28 11:52:15 --> Trying to get property 'd_isdokter' of non-object
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_dokter_view.php(261): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp74\\htdo...', 261, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(112): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
+CRITICAL - 2022-08-28 11:53:49 --> Undefined variable: d_isdokter
+#0 C:\xampp74\htdocs\desasehat\app\Views\emr\epemeriksaan_dokter_view.php(260): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 260, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp74\\htdo...')
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('emr/epemeriksaa...', Array, true)
+#4 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(113): view('emr/epemeriksaa...', Array)
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->pperiksa_dokter('3')
+#6 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#7 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#10 {main}
+CRITICAL - 2022-08-28 11:59:17 --> Undefined variable: nik
+#0 C:\xampp74\htdocs\desasehat\app\Controllers\Emr\Epemeriksaan.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp74\\htdo...', 141, Array)
+#1 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Emr\Epemeriksaan->psave()
+#2 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Emr\Epemeriksaan))
+#3 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp74\htdocs\desasehat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp74\htdocs\desasehat\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp74\\htdo...')
+#6 {main}
