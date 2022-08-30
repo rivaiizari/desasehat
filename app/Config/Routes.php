@@ -71,6 +71,9 @@ $routes->group('dashboard', ['filter' => 'filterakses:1'], function ($routes) {
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->group('auths', function ($routes) {
+	$routes->post('profile', 'Base_ctemplate::pprofile');
+});
 
 $routes->group('home', function ($routes) {
     $routes->get('/', 'Home::index');

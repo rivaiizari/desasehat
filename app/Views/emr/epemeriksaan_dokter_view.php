@@ -236,19 +236,19 @@
                         <div class="row invoice-info">
                             <div class="col-sm-3 invoice-col">
                                 <strong>Hcl</strong>
-                                <address id="ddObat_hcl"><?= $data_detail->ro_hcl ?></address>
+                                <address id="ddObat_hcl"><?php if(!empty($data_detail->ro_hcl)){ echo $data_detail->ro_hcl.' Mg';}  ?></address>
                             </div>
                             <div class="col-sm-3 invoice-col">
                                 <strong>Captopril</strong>
-                                <address id="ddObat_captopril"><?= $data_detail->ro_captopril ?></address>
+                                <address id="ddObat_captopril"><?php if(!empty($data_detail->ro_captopril)){ echo $data_detail->ro_captopril.' Mg';} ?></address>
                             </div>
                             <div class="col-sm-3 invoice-col">
                                 <strong>Valsartan</strong>
-                                <address id="ddObat_valsartan"><?= $data_detail->ro_valsarta ?></address>
+                                <address id="ddObat_valsartan"><?php if(!empty($data_detail->ro_valsarta)){ echo $data_detail->ro_valsarta.' Mg';} ?></address>
                             </div>
                             <div class="col-sm-3 invoice-col">
                                 <strong>Amlodipine</strong>
-                                <address id="ddObat_amlodipine"><?= $data_detail->ro_amlodipine ?></address>
+                                <address id="ddObat_amlodipine"><?php if(!empty($data_detail->ro_amlodipine)){ echo $data_detail->ro_amlodipine.' Mg';}  ?></address>
                             </div>
                         </div>
                         <div class="row invoice-info">
@@ -258,7 +258,7 @@
                             </div>
                         </div>
 
-                    <?php if($data_ptype['d_isdokter'] == '1'){ ?>
+                    <?php if($data_ptype['isdokter'] == '1'){ ?>
                         <div class="separator-solid"></div><hr>
                         <div class="card card-success">
                             <div class="card-header">
@@ -299,7 +299,7 @@
     </section>
 
     <!-- /.content -->
-    <script src="<?= base_url() ?>/assets_lte/plugins/jquery/jquery.min.js"></script>
+    <script src="<?= base_url().BASE_URL ?>/assets_lte/plugins/jquery/jquery.min.js"></script>
     <!-- jquery-validation -->
     <script src="<?= base_url().BASE_URL ?>/assets_lte/plugins/jquery-validation/jquery.validate.min.js"></script>
     <script src="<?= base_url().BASE_URL ?>/assets_lte/plugins/jquery-validation/additional-methods.min.js"></script>

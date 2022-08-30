@@ -9,6 +9,8 @@ use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\Emr_epemeriksaan_model;
 use App\Models\Master_model;
 
+use App\Controllers\Master_modul;
+
 class Epemeriksaan extends BaseController {
     protected $emr_epemeriksaan_model;
 	protected $logged_in;
@@ -88,9 +90,8 @@ class Epemeriksaan extends BaseController {
 
 	public function pperiksa_dokter($id=false){
 		$session = \Config\Services::session();
-		$master_model = new Master_model();
-
-		$dprofile_type = getprofile_type_byid($this->logged_in);
+		$master_modul = new Master_modul();
+		$dprofile_type = $master_modul->getprofile_type_byid($this->logged_in);
 		if(!empty($id)){
 			$data_m = [
 				'id' => $id,
@@ -99,10 +100,6 @@ class Epemeriksaan extends BaseController {
 
 			$getmedis_penginput = $this->emr_epemeriksaan_model->m_getmedis_penginput($data_m);
 			$getmedis_detail = $this->emr_epemeriksaan_model->m_getmedis_detail($data_m);
-			// var_dump($getmedis_detail);die();
-			// var_dump($getmedis_penginput);die();
-			// var_dump($dprofile_type);die();
-
 			$data_in = [
 				'data_title' => 'List Pemeriksaan',
 				'idLog' => $this->logged_in,

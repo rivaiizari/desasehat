@@ -5,6 +5,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\Master_modul_model;
+use App\Models\Master_model;
 
 class Master_modul extends BaseController {
     protected $master_modul_model;
@@ -115,7 +116,30 @@ class Master_modul extends BaseController {
         return $this->response->setJSON($resp);
 	}
 
-    
+    public function getprofile_type_byid($id){
+		$resp = [
+            'id_user' => '0',
+            'isdokter' => '0',
+            'isnakes' => '0',
+            'isapotik' => '0',
+        ];
+        $get_data = $this->master_modul_model->get_isdokter_byid($id);
+        if(!empty($get_data)){
+            if(!empty($get_data->id_user)){
+                $resp['id_user'] = $get_data->id_user;
+            }
+            if(!empty($get_data->isdokter)){
+                $resp['isdokter'] = $get_data->isdokter;
+            }
+            if(!empty($get_data->isnakes)){
+                $resp['isnakes'] = $get_data->isnakes;
+            }
+            if(!empty($get_data->isapotik)){
+                $resp['isapotik'] = $get_data->isapotik;
+            }
+        }
+        return $resp;
+	}
 
    
 

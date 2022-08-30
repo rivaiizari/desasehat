@@ -61,7 +61,7 @@
 
 </section>
 <!-- /.content -->
-<script src="<?= base_url() ?>/assets_lte/plugins/jquery/jquery.min.js"></script>
+<script src="<?= base_url().BASE_URL ?>/assets_lte/plugins/jquery/jquery.min.js"></script>
 <!-- jquery-validation -->
 <script src="<?= base_url().BASE_URL ?>/assets_lte/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="<?= base_url().BASE_URL ?>/assets_lte/plugins/jquery-validation/additional-methods.min.js"></script>

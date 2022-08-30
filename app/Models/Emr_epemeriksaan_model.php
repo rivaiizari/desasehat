@@ -90,7 +90,7 @@ class Emr_epemeriksaan_model extends Model {
         ,lke.nama AS nama_kelurahan
         FROM medis m
         JOIN users_profile up ON up.id_user = m.id_user
-        JOIN PROFILE pf ON pf.id_profile = up.id_profile
+        JOIN profile pf ON pf.id_profile = up.id_profile
         LEFT JOIN propinsi lp ON lp.id_propinsi = up.id_propinsi
         LEFT JOIN kabkota lkb ON lkb.id_kabkota = up.id_kabkota
         LEFT JOIN kecamatan lkc ON lkc.id_kecamatan = up.id_kecamatan

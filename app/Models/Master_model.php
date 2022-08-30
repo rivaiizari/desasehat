@@ -239,7 +239,7 @@ class Master_model extends Model {
         FROM users_profile up
         JOIN users us ON up.id_user = us.id
         JOIN profile pf ON up.id_profile = pf.id_profile
-        WHERE us.id = '1'
+        WHERE up.id_profile IS NOT NULL
         AND pf.isaktif = '1'
         AND up.id_user = '".$id."'");
         return $query->getRow();

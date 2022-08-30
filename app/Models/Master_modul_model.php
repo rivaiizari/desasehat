@@ -41,5 +41,16 @@ class Master_modul_model extends Model {
         return $query->getResult();
     }
 
+    public function get_isdokter_byid($id = false){
+        $query = $this->db->query("SELECT up.id_user, pf.isdokter, pf.isnakes, pf.isapotik
+        FROM users_profile up
+        JOIN users us ON up.id_user = us.id
+        JOIN profile pf ON up.id_profile = pf.id_profile
+        WHERE up.id_profile IS NOT NULL
+        AND pf.isaktif = '1'
+        AND up.id_user = '".$id."'");
+        return $query->getRow();
+    } 
+
    
 }
